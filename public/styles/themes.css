@@ -1,0 +1,234 @@
+/* ============================================
+   PeriodGuide.com — Themes & Dark Mode
+   ============================================ */
+
+/* --- Dark Theme --- */
+[data-theme="dark"] {
+  --color-white: #1A1A2E;
+  --color-gray-50: #1E1E32;
+  --color-gray-100: #252540;
+  --color-gray-200: #2D2D4A;
+  --color-gray-300: #3D3D5C;
+  --color-gray-400: #5C5C7A;
+  --color-gray-500: #8585A0;
+  --color-gray-600: #A0A0B8;
+  --color-gray-700: #C0C0D0;
+  --color-gray-800: #D8D8E5;
+  --color-gray-900: #EBEBF0;
+  --color-black: #F5F5FA;
+
+  --color-primary: #FF7B93;
+  --color-primary-dark: #FF6680;
+  --color-primary-light: #4A2030;
+  --color-primary-pale: #2A1520;
+
+  --color-secondary: #9B7FFF;
+  --color-secondary-dark: #8B6FFF;
+  --color-secondary-light: #3A2A5A;
+  --color-secondary-pale: #221A3A;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] body {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(26, 26, 46, 0.95);
+  border-bottom-color: var(--color-gray-200);
+}
+
+[data-theme="dark"] .footer {
+  background: #0F0F1E;
+}
+
+[data-theme="dark"] .evidence-badge--strong {
+  background: rgba(46, 204, 113, 0.15);
+  color: #4CAF50;
+}
+[data-theme="dark"] .evidence-badge--moderate {
+  background: rgba(33, 150, 243, 0.15);
+  color: #64B5F6;
+}
+[data-theme="dark"] .evidence-badge--emerging {
+  background: rgba(255, 152, 0, 0.15);
+  color: #FFB74D;
+}
+[data-theme="dark"] .evidence-badge--traditional {
+  background: rgba(156, 39, 176, 0.15);
+  color: #CE93D8;
+}
+
+[data-theme="dark"] .alert--danger {
+  background: rgba(198, 40, 40, 0.15);
+  color: #EF9A9A;
+}
+[data-theme="dark"] .alert--warning {
+  background: rgba(230, 81, 0, 0.15);
+  color: #FFB74D;
+}
+[data-theme="dark"] .alert--info {
+  background: rgba(21, 101, 192, 0.15);
+  color: #90CAF9;
+}
+[data-theme="dark"] .alert--success {
+  background: rgba(46, 125, 50, 0.15);
+  color: #A5D6A7;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  transition: all var(--transition-fast);
+  color: var(--color-gray-600);
+}
+.theme-toggle:hover {
+  background: var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+
+/* --- High Contrast Mode --- */
+[data-contrast="high"] {
+  --color-primary: #D32F4F;
+  --color-secondary: #5E35B1;
+  --color-gray-600: #424242;
+  --color-gray-500: #616161;
+}
+
+[data-contrast="high"] .btn--primary {
+  background: var(--color-primary);
+  box-shadow: none;
+}
+
+[data-contrast="high"] .card {
+  border-width: 2px;
+  border-color: var(--color-gray-400);
+}
+
+/* --- Gradient Backgrounds --- */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #FFF0F3 0%, #F3F0FF 50%, #E3F2FD 100%);
+}
+
+[data-theme="dark"] .bg-gradient-hero {
+  background: linear-gradient(135deg, #2A1520 0%, #221A3A 50%, #151A2E 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #FFF0F3 0%, #FFF8E1 100%);
+}
+
+.bg-gradient-cool {
+  background: linear-gradient(135deg, #F3F0FF 0%, #E3F2FD 100%);
+}
+
+.bg-gradient-menstrual {
+  background: linear-gradient(135deg, rgba(232, 93, 117, 0.08), rgba(232, 93, 117, 0.02));
+}
+
+.bg-gradient-follicular {
+  background: linear-gradient(135deg, rgba(86, 184, 112, 0.08), rgba(86, 184, 112, 0.02));
+}
+
+.bg-gradient-ovulation {
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.08), rgba(245, 166, 35, 0.02));
+}
+
+.bg-gradient-luteal {
+  background: linear-gradient(135deg, rgba(124, 92, 252, 0.08), rgba(124, 92, 252, 0.02));
+}
+
+/* --- Decorative Elements --- */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.blob--pink {
+  background: var(--color-primary);
+}
+
+.blob--purple {
+  background: var(--color-secondary);
+}
+
+.blob--green {
+  background: var(--color-follicular);
+}
+
+/* --- Animation Classes --- */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.4s var(--transition-spring) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-pulse { animation: pulse 2s ease-in-out infinite; }
+.animate-rotate { animation: rotate 20s linear infinite; }
+
+/* --- Print Styles --- */
+@media print {
+  .nav, .footer, .btn, .mobile-menu,
+  .theme-toggle, .lang-switcher,
+  .toast-container { display: none !important; }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  .card { box-shadow: none; border: 1px solid #ccc; }
+
+  a { color: black; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+}

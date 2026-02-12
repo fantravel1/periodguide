@@ -1,0 +1,13 @@
+{
+  "name": "periodguide",
+  "version": "1.0.0",
+  "description": "PeriodGuide — Evidence-based, privacy-first menstrual cycle companion",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site — no build step needed'",
+    "start": "vercel dev"
+  },
+  "keywords": ["period", "menstrual", "cycle", "health", "tracker", "guide"],
+  "license": "UNLICENSED"
+}
