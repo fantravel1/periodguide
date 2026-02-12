@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="PMS &amp; PMDD Companion — understand the difference, track your symptoms, and explore evidence-graded management strategies from lifestyle changes to clinical options.">
+  <meta name="keywords" content="PMS, PMDD, premenstrual syndrome, premenstrual dysphoric disorder, luteal phase, mood symptoms, PMS treatment, PMDD treatment">
+  <meta name="author" content="PeriodGuide">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="PMS &amp; PMDD Companion — PeriodGuide">
+  <meta property="og:description" content="Understand PMS vs. PMDD, track symptoms, and explore evidence-graded management strategies.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://periodguide.com/toolkits/pms-pmdd.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PMS &amp; PMDD Companion — PeriodGuide">
+  <meta name="twitter:description" content="Understand PMS vs. PMDD, track symptoms, and explore evidence-graded management.">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/toolkits/pms-pmdd.html">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/toolkits/pms-pmdd.html">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/toolkits/pms-pmdd.html">
+  <link rel="alternate" hreflang="x-default" href="https://periodguide.com/toolkits/pms-pmdd.html">
+
+  <link rel="canonical" href="https://periodguide.com/toolkits/pms-pmdd.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/themes.css">
+
+  <title>PMS &amp; PMDD Companion — PeriodGuide</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "PMS & PMDD Companion",
+    "description": "Evidence-graded companion for understanding and managing Premenstrual Syndrome (PMS) and Premenstrual Dysphoric Disorder (PMDD).",
+    "url": "https://periodguide.com/toolkits/pms-pmdd.html",
+    "lastReviewed": "2025-01-15",
+    "mainContentOfPage": {
+      "@type": "WebPageElement",
+      "cssSelector": "#main"
+    },
+    "about": [
+      {
+        "@type": "MedicalCondition",
+        "name": "Premenstrual Syndrome",
+        "alternateName": "PMS"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Premenstrual Dysphoric Disorder",
+        "alternateName": "PMDD"
+      }
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "PeriodGuide",
+      "url": "https://periodguide.com"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== PMS & PMDD Page Styles ===== */
+
+    /* Hero */
+    .companion-hero {
+      position: relative;
+      overflow: hidden;
+      padding: var(--space-16) 0 var(--space-12);
+      background: linear-gradient(135deg, #F3F0FF 0%, #FFF0F3 40%, #E3F2FD 100%);
+    }
+    @media (min-width: 768px) {
+      .companion-hero { padding: var(--space-20) 0 var(--space-16); }
+    }
+    .companion-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .companion-hero__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+      }
+    }
+    .companion-hero__text { text-align: center; }
+    @media (min-width: 1024px) {
+      .companion-hero__text { text-align: left; }
+    }
+    .companion-hero__title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-extrabold);
+      line-height: 1.1;
+      margin-bottom: var(--space-4);
+      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @media (min-width: 768px) {
+      .companion-hero__title { font-size: var(--text-5xl); }
+    }
+    .companion-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      max-width: 520px;
+      margin: 0 auto var(--space-6);
+    }
+    @media (min-width: 1024px) {
+      .companion-hero__subtitle { margin: 0 0 var(--space-6); }
+    }
+    .companion-hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      justify-content: center;
+    }
+    @media (min-width: 1024px) {
+      .companion-hero__ctas { justify-content: flex-start; }
+    }
+    .companion-hero__image {
+      border-radius: var(--radius-2xl);
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      box-shadow: var(--shadow-xl);
+    }
+    @media (min-width: 768px) {
+      .companion-hero__image { height: 360px; }
+    }
+    .companion-hero__blobs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .companion-hero__blobs .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+    .companion-hero__blobs .blob:nth-child(1) {
+      width: 380px; height: 380px;
+      top: -100px; left: -80px;
+      background: var(--color-secondary);
+      opacity: 0.06;
+    }
+    .companion-hero__blobs .blob:nth-child(2) {
+      width: 280px; height: 280px;
+      bottom: -50px; right: -60px;
+      background: var(--color-primary);
+      opacity: 0.05;
+    }
+    [data-theme="dark"] .companion-hero {
+      background: linear-gradient(135deg, #221A3A 0%, #2A1520 40%, #151A2E 100%);
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      padding: var(--space-4) 0;
+    }
+    .breadcrumb a {
+      color: var(--color-gray-500);
+      transition: color var(--transition-fast);
+    }
+    .breadcrumb a:hover { color: var(--color-primary); }
+    .breadcrumb__sep { color: var(--color-gray-400); }
+
+    /* Comparison Section */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .comparison { grid-template-columns: 1fr 1fr; }
+    }
+    .comparison-card {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      border: 2px solid var(--color-gray-200);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .comparison-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+    .comparison-card--pms::before {
+      background: linear-gradient(90deg, var(--color-secondary-light), var(--color-secondary));
+    }
+    .comparison-card--pmdd::before {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-danger));
+    }
+    .comparison-card__tag {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-3);
+    }
+    .comparison-card--pms .comparison-card__tag {
+      background: var(--color-secondary-pale);
+      color: var(--color-secondary);
+    }
+    .comparison-card--pmdd .comparison-card__tag {
+      background: var(--color-primary-pale);
+      color: var(--color-primary);
+    }
+    .comparison-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      margin-bottom: var(--space-3);
+    }
+    .comparison-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-4);
+    }
+    .comparison-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .comparison-card__list li {
+      padding: var(--space-2) 0;
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      border-bottom: 1px solid var(--color-gray-100);
+    }
+    .comparison-card__list li:last-child { border-bottom: none; }
+    .comparison-card__list li::before {
+      content: "\2022";
+      flex-shrink: 0;
+      font-weight: bold;
+    }
+    .comparison-card--pms .comparison-card__list li::before { color: var(--color-secondary); }
+    .comparison-card--pmdd .comparison-card__list li::before { color: var(--color-primary); }
+
+    /* Symptom Checklist */
+    .checklist-section {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    .checklist-header {
+      padding: var(--space-5) var(--space-6);
+      background: var(--color-gray-50);
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    .checklist-header h3 {
+      margin-bottom: var(--space-1);
+    }
+    .checklist-header p {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      margin: 0;
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    @media (min-width: 768px) {
+      .checklist-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .checklist-category {
+      padding: var(--space-5) var(--space-6);
+      border-bottom: 1px solid var(--color-gray-100);
+    }
+    @media (min-width: 768px) {
+      .checklist-category { border-right: 1px solid var(--color-gray-100); }
+      .checklist-category:nth-child(even) { border-right: none; }
+    }
+    .checklist-category__title {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-bold);
+      color: var(--color-black);
+      margin-bottom: var(--space-3);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .checklist-category__icon {
+      font-size: var(--text-base);
+    }
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-2) 0;
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+    }
+    .checklist-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-primary);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .checklist-item label {
+      cursor: pointer;
+      line-height: var(--leading-relaxed);
+    }
+    .checklist-track-hint {
+      font-size: var(--text-xs);
+      color: var(--color-info);
+      font-style: italic;
+      margin-left: calc(18px + var(--space-3));
+      margin-top: var(--space-1);
+    }
+
+    /* Strategy Cards */
+    .strategy-category {
+      margin-bottom: var(--space-10);
+    }
+    .strategy-category__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-3);
+      border-bottom: 2px solid var(--color-gray-200);
+    }
+    .strategy-category__icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      border-radius: var(--radius-lg);
+      flex-shrink: 0;
+    }
+    .strategy-category__title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      margin: 0;
+    }
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    @media (min-width: 768px) {
+      .strategy-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1200px) {
+      .strategy-grid--three { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .strategy-card {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-gray-200);
+      box-shadow: var(--shadow-sm);
+      padding: var(--space-5);
+      transition: all var(--transition-base);
+    }
+    .strategy-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .strategy-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .strategy-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: var(--weight-bold);
+      color: var(--color-black);
+      margin: 0;
+    }
+    .strategy-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-4);
+    }
+    .strategy-card__notes {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .strategy-note {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      font-size: var(--text-xs);
+      line-height: var(--leading-relaxed);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-md);
+    }
+    .strategy-note__icon {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .strategy-note--safety {
+      background: #FFF3E0;
+      color: #E65100;
+    }
+    .strategy-note--track {
+      background: #E3F2FD;
+      color: #1565C0;
+    }
+    [data-theme="dark"] .strategy-note--safety {
+      background: rgba(230, 81, 0, 0.15);
+      color: #FFB74D;
+    }
+    [data-theme="dark"] .strategy-note--track {
+      background: rgba(21, 101, 192, 0.15);
+      color: #90CAF9;
+    }
+
+    /* Self-Assessment */
+    .assessment-section {
+      background: var(--color-white);
+      border: 2px solid var(--color-secondary-light);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+    }
+    .assessment-header {
+      padding: var(--space-6);
+      background: var(--color-secondary-pale);
+      border-bottom: 1px solid var(--color-secondary-light);
+    }
+    .assessment-header h3 {
+      color: var(--color-secondary);
+      margin-bottom: var(--space-2);
+    }
+    .assessment-header p {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      margin: 0;
+    }
+    .assessment-body {
+      padding: var(--space-6);
+    }
+    .assessment-question {
+      padding: var(--space-4);
+      background: var(--color-gray-50);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-4);
+    }
+    .assessment-question__text {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-black);
+      margin-bottom: var(--space-3);
+    }
+    .assessment-options {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .assessment-option {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background var(--transition-fast);
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+    }
+    .assessment-option:hover {
+      background: var(--color-gray-100);
+    }
+    .assessment-option input[type="radio"] {
+      accent-color: var(--color-secondary);
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+    }
+    .assessment-result {
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      margin-top: var(--space-4);
+      display: none;
+    }
+    .assessment-result.visible { display: block; }
+    .assessment-result--pms {
+      background: var(--color-secondary-pale);
+      border: 1px solid var(--color-secondary-light);
+    }
+    .assessment-result--pmdd {
+      background: var(--color-primary-pale);
+      border: 1px solid var(--color-primary-light);
+    }
+
+    /* Doctor Visit Prep */
+    .doctor-prep {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    @media (min-width: 768px) {
+      .doctor-prep { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .doctor-prep { grid-template-columns: repeat(3, 1fr); }
+    }
+    .doctor-prep-card {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      border: 1px solid var(--color-gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .doctor-prep-card__icon {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-3);
+    }
+    .doctor-prep-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: var(--weight-bold);
+      margin-bottom: var(--space-2);
+    }
+    .doctor-prep-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .doctor-prep-card__list li {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      padding: var(--space-1) 0;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      line-height: var(--leading-relaxed);
+    }
+    .doctor-prep-card__list li::before {
+      content: "\2713";
+      flex-shrink: 0;
+      color: var(--color-success);
+      font-weight: bold;
+    }
+
+    /* Red flag card */
+    .red-flag-card {
+      background: var(--color-white);
+      border: 2px solid var(--color-danger);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      margin-bottom: var(--space-4);
+    }
+    .red-flag-card__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .red-flag-card__icon {
+      font-size: var(--text-2xl);
+      flex-shrink: 0;
+    }
+    .red-flag-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      color: var(--color-danger);
+      margin: 0;
+    }
+    .red-flag-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .red-flag-card__list li {
+      padding: var(--space-2) 0;
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      border-bottom: 1px solid var(--color-gray-100);
+    }
+    .red-flag-card__list li:last-child { border-bottom: none; }
+    .red-flag-card__list li::before {
+      content: "\26A0";
+      flex-shrink: 0;
+      color: var(--color-danger);
+    }
+
+    /* Safety disclaimer */
+    .safety-disclaimer {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+    }
+    .safety-disclaimer__icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFF3E0;
+      color: #E65100;
+      border-radius: var(--radius-lg);
+      font-size: var(--text-xl);
+    }
+    .safety-disclaimer__text {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+    }
+    .safety-disclaimer__text strong {
+      color: var(--color-gray-800);
+      display: block;
+      margin-bottom: var(--space-1);
+      font-size: var(--text-base);
+    }
+
+    /* Crisis resource */
+    .crisis-banner {
+      background: linear-gradient(135deg, var(--color-secondary-pale), var(--color-primary-pale));
+      border: 2px solid var(--color-secondary-light);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+    }
+    .crisis-banner__icon {
+      flex-shrink: 0;
+      font-size: var(--text-2xl);
+    }
+    .crisis-banner__text {
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+    }
+    .crisis-banner__text strong {
+      display: block;
+      font-size: var(--text-base);
+      color: var(--color-black);
+      margin-bottom: var(--space-1);
+    }
+    .crisis-banner__text a {
+      font-weight: var(--weight-semibold);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="PeriodGuide Home">
+        <div class="nav__logo-icon" aria-hidden="true">P</div>
+        <span>PeriodGuide</span>
+      </a>
+
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="../index.html" role="menuitem" data-i18n="nav_home">Home</a></li>
+        <li role="none"><a href="../today.html" role="menuitem" data-i18n="nav_today">Today's Guide</a></li>
+        <li role="none"><a href="../cycle-day.html" role="menuitem" data-i18n="nav_cycle_day">Cycle Day</a></li>
+        <li role="none"><a href="../track.html" role="menuitem" data-i18n="nav_track">Track</a></li>
+        <li role="none"><a href="../insights.html" role="menuitem" data-i18n="nav_insights">Insights</a></li>
+        <li role="none"><a href="cramps.html" role="menuitem" class="active" data-i18n="nav_toolkits">Toolkits</a></li>
+        <li role="none"><a href="../traditions.html" role="menuitem" data-i18n="nav_traditions">Traditions</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-switcher__btn" data-lang="es" aria-label="Espa&#241;ol">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr" aria-label="Fran&#231;ais">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="../today.html" data-i18n="nav_today">Today's Guide</a></li>
+      <li><a href="../cycle-day.html" data-i18n="nav_cycle_day">Cycle Day</a></li>
+      <li><a href="../track.html" data-i18n="nav_track">Track</a></li>
+      <li><a href="../insights.html" data-i18n="nav_insights">Insights</a></li>
+      <li><a href="cramps.html" class="active" data-i18n="nav_toolkits">Toolkits</a></li>
+      <li><a href="../traditions.html" data-i18n="nav_traditions">Traditions</a></li>
+      <li><a href="../clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+      <li><a href="../privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+      <li><a href="../about.html" data-i18n="nav_about">About</a></li>
+    </ul>
+    <div class="lang-switcher" style="margin-top:var(--space-6);justify-content:center;">
+      <button class="lang-switcher__btn active" data-lang="en">EN</button>
+      <button class="lang-switcher__btn" data-lang="es">ES</button>
+      <button class="lang-switcher__btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="companion-hero">
+      <div class="companion-hero__blobs" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="blob"></div>
+      </div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html" data-i18n="nav_home">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span data-i18n="nav_toolkits">Toolkits</span>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page" data-i18n="toolkit_pms_title">PMS &amp; PMDD</span>
+        </nav>
+
+        <div class="companion-hero__inner">
+          <div class="companion-hero__text">
+            <h1 class="companion-hero__title" data-i18n="toolkit_pms_hero_title">PMS &amp; PMDD Companion</h1>
+            <p class="companion-hero__subtitle" data-i18n="toolkit_pms_hero_subtitle">Understand the difference between PMS and PMDD, track your symptoms across cycles, and explore evidence-graded management strategies from lifestyle changes to clinical treatment options.</p>
+            <div class="companion-hero__ctas">
+              <a href="#assessment" class="btn btn--primary btn--lg">Take Self-Assessment</a>
+              <a href="#strategies" class="btn btn--outline btn--lg">View Strategies</a>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&h=600&fit=crop"
+              alt="Calming lavender flowers representing relaxation and self-care"
+              class="companion-hero__image"
+              loading="eager"
+              width="1200"
+              height="600"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PMS vs PMDD SECTION ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 data-i18n="toolkit_pms_vs_pmdd_title">Understanding PMS vs. PMDD</h2>
+          <p class="text-lg text-muted" style="max-width:660px;margin:0 auto;" data-i18n="toolkit_pms_vs_pmdd_desc">Both PMS and PMDD involve symptoms in the luteal phase (1-2 weeks before your period), but they differ significantly in severity, impact, and treatment approach.</p>
+        </div>
+
+        <div class="comparison">
+
+          <!-- PMS Card -->
+          <div class="comparison-card comparison-card--pms">
+            <span class="comparison-card__tag">PMS</span>
+            <h3 class="comparison-card__title">Premenstrual Syndrome</h3>
+            <p class="comparison-card__desc">Affects up to 75% of menstruating people to some degree. Symptoms are noticeable but manageable, and generally do not prevent you from carrying out daily activities. Symptoms appear in the luteal phase and resolve within a few days of your period starting.</p>
+            <ul class="comparison-card__list">
+              <li>Mild to moderate mood changes (irritability, sadness, anxiety)</li>
+              <li>Bloating, breast tenderness, headaches</li>
+              <li>Food cravings, fatigue, difficulty concentrating</li>
+              <li>Sleep disturbances in the days before your period</li>
+              <li>Symptoms are uncomfortable but do not severely impair function</li>
+              <li>Manageable with lifestyle changes and over-the-counter options</li>
+            </ul>
+          </div>
+
+          <!-- PMDD Card -->
+          <div class="comparison-card comparison-card--pmdd">
+            <span class="comparison-card__tag">PMDD</span>
+            <h3 class="comparison-card__title">Premenstrual Dysphoric Disorder</h3>
+            <p class="comparison-card__desc">Affects 3-8% of menstruating people. PMDD is a recognized clinical condition in the DSM-5 characterized by severe emotional and physical symptoms that significantly impair daily functioning. It is caused by an abnormal sensitivity to normal hormonal fluctuations, not by abnormal hormone levels.</p>
+            <ul class="comparison-card__list">
+              <li>Severe mood swings, intense irritability or anger</li>
+              <li>Marked depressive mood, feelings of hopelessness</li>
+              <li>Significant anxiety, tension, or feeling "on edge"</li>
+              <li>Loss of interest in usual activities</li>
+              <li>Difficulty concentrating, feeling overwhelmed</li>
+              <li>Physical symptoms similar to PMS but often more intense</li>
+              <li>Symptoms severely impair work, school, or relationships</li>
+              <li>Requires medical treatment; SSRIs are first-line therapy</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Key difference callout -->
+        <div class="alert alert--info mt-8">
+          <span class="alert__icon" aria-hidden="true">&#128161;</span>
+          <div class="alert__content">
+            <div class="alert__title">The key difference is functional impairment</div>
+            <p style="margin:0;">PMS is uncomfortable; PMDD is disabling. If your premenstrual symptoms regularly cause you to miss work or school, damage relationships, or trigger thoughts of self-harm, this points toward PMDD and warrants professional evaluation. PMDD is a real medical condition, not a character flaw or something to "push through."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SYMPTOM CHECKLIST ===== -->
+    <section class="section bg-gray-50">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h2 data-i18n="toolkit_pms_checklist_title">Symptom Tracking Checklist</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">Check the symptoms you experience in the 1-2 weeks before your period. Track these across at least 2 cycles for the most useful pattern data.</p>
+        </div>
+
+        <div class="checklist-section">
+          <div class="checklist-header">
+            <h3>Track Your Luteal Phase Symptoms</h3>
+            <p>Check all that apply during the 1-2 weeks before your period. Use this as a tracking prompt alongside PeriodGuide's daily tracker.</p>
+          </div>
+
+          <div class="checklist-grid">
+
+            <!-- Emotional -->
+            <div class="checklist-category">
+              <div class="checklist-category__title">
+                <span class="checklist-category__icon" aria-hidden="true">&#128150;</span>
+                Emotional &amp; Mood
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-irritable" aria-label="Irritability or anger">
+                <label for="sym-irritable">Irritability or anger outbursts</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-sad" aria-label="Sadness or tearfulness">
+                <label for="sym-sad">Sadness, tearfulness, or feeling "down"</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-anxiety" aria-label="Anxiety or tension">
+                <label for="sym-anxiety">Anxiety, tension, or feeling on edge</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-moodswings" aria-label="Mood swings">
+                <label for="sym-moodswings">Rapid mood swings</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-hopeless" aria-label="Feelings of hopelessness">
+                <label for="sym-hopeless">Feelings of hopelessness or worthlessness</label>
+              </div>
+              <p class="checklist-track-hint">Track intensity (mild/moderate/severe) and which cycle days</p>
+            </div>
+
+            <!-- Cognitive -->
+            <div class="checklist-category">
+              <div class="checklist-category__title">
+                <span class="checklist-category__icon" aria-hidden="true">&#129504;</span>
+                Cognitive &amp; Behavioral
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-focus" aria-label="Difficulty concentrating">
+                <label for="sym-focus">Difficulty concentrating or "brain fog"</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-interest" aria-label="Loss of interest">
+                <label for="sym-interest">Loss of interest in usual activities</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-overwhelm" aria-label="Feeling overwhelmed">
+                <label for="sym-overwhelm">Feeling overwhelmed or out of control</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-cravings" aria-label="Food cravings">
+                <label for="sym-cravings">Increased food cravings (especially carbs/sweets)</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-withdrawal" aria-label="Social withdrawal">
+                <label for="sym-withdrawal">Social withdrawal or conflict avoidance</label>
+              </div>
+              <p class="checklist-track-hint">Note which days symptoms start and peak</p>
+            </div>
+
+            <!-- Physical -->
+            <div class="checklist-category">
+              <div class="checklist-category__title">
+                <span class="checklist-category__icon" aria-hidden="true">&#129463;</span>
+                Physical Symptoms
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-bloating" aria-label="Bloating">
+                <label for="sym-bloating">Bloating or weight gain from water retention</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-breast" aria-label="Breast tenderness">
+                <label for="sym-breast">Breast tenderness or swelling</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-headache" aria-label="Headaches">
+                <label for="sym-headache">Headaches or migraines</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-fatigue" aria-label="Fatigue">
+                <label for="sym-fatigue">Fatigue or low energy</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-joint" aria-label="Joint or muscle pain">
+                <label for="sym-joint">Joint or muscle aches</label>
+              </div>
+              <p class="checklist-track-hint">Rate severity 1-5 each day in your tracker</p>
+            </div>
+
+            <!-- Sleep & Energy -->
+            <div class="checklist-category">
+              <div class="checklist-category__title">
+                <span class="checklist-category__icon" aria-hidden="true">&#127769;</span>
+                Sleep &amp; Energy
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-insomnia" aria-label="Insomnia">
+                <label for="sym-insomnia">Difficulty falling or staying asleep</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-hypersomnia" aria-label="Hypersomnia">
+                <label for="sym-hypersomnia">Sleeping more than usual (hypersomnia)</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-lowenergy" aria-label="Feeling sluggish">
+                <label for="sym-lowenergy">Feeling sluggish or physically drained</label>
+              </div>
+              <div class="checklist-item">
+                <input type="checkbox" id="sym-appetite" aria-label="Appetite changes">
+                <label for="sym-appetite">Significant appetite changes (overeating or loss of appetite)</label>
+              </div>
+              <p class="checklist-track-hint">Track hours of sleep and quality rating</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MANAGEMENT STRATEGIES ===== -->
+    <section id="strategies" class="section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 data-i18n="toolkit_pms_strategies_title">Evidence-Graded Management Strategies</h2>
+          <p class="text-lg text-muted" style="max-width:640px;margin:0 auto;">Organized by category, from lifestyle interventions to clinical options. Each recommendation shows its evidence strength and includes safety information.</p>
+        </div>
+
+        <!-- LIFESTYLE -->
+        <div class="strategy-category">
+          <div class="strategy-category__header">
+            <div class="strategy-category__icon" style="background:#E8F5E9;color:#2E7D32;" aria-hidden="true">&#127939;</div>
+            <h3 class="strategy-category__title" data-i18n="toolkit_pms_lifestyle">Lifestyle Interventions</h3>
+          </div>
+
+          <div class="strategy-grid strategy-grid--three">
+
+            <!-- Exercise -->
+            <div class="strategy-card">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Regular Aerobic Exercise</h4>
+                <span class="evidence-badge evidence-badge--strong">Strong Evidence</span>
+              </div>
+              <p class="strategy-card__desc">150 minutes/week of moderate aerobic exercise (brisk walking, swimming, cycling) significantly reduces both physical and emotional PMS symptoms. Exercise increases serotonin and endorphin levels, improves sleep, and reduces cortisol. Multiple systematic reviews confirm this benefit. Consistency throughout the cycle matters more than intensity.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Adjust intensity during your most symptomatic days. Gentle movement is better than no movement, but do not force high-intensity workouts when you feel depleted.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Type and duration of exercise, cycle day, symptom severity before and after.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sleep -->
+            <div class="strategy-card">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Sleep Optimization</h4>
+                <span class="evidence-badge evidence-badge--moderate">Moderate Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Progesterone rises in the luteal phase and has a sedating metabolite (allopregnanolone), yet many people report worse sleep premenstrually. Prioritizing 7-9 hours, keeping a consistent schedule, and limiting screens before bed can reduce next-day mood symptoms. Cool room temperature (65-68&#176;F) is particularly helpful in the luteal phase when core body temperature rises.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> If you have persistent insomnia, talk to a provider. Avoid relying on alcohol or OTC sleep aids, which can worsen PMS mood symptoms.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Bedtime, wake time, subjective sleep quality, next-day mood rating.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nutrition -->
+            <div class="strategy-card">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Targeted Nutrition</h4>
+                <span class="evidence-badge evidence-badge--moderate">Moderate Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Complex carbohydrates increase tryptophan availability and serotonin synthesis, which may explain premenstrual carb cravings. Eating smaller, frequent meals with complex carbs, adequate protein, and healthy fats can stabilize blood sugar and reduce mood swings. Reducing caffeine, alcohol, and excess sodium in the luteal phase may also reduce anxiety, breast tenderness, and bloating.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Do not use PMS as a reason for extreme dieting. Focus on adding nutrient-dense foods, not restricting. If you have disordered eating patterns, work with a professional.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Caffeine and alcohol intake, salt intake, craving intensity, bloating severity.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUPPLEMENTS -->
+        <div class="strategy-category">
+          <div class="strategy-category__header">
+            <div class="strategy-category__icon" style="background:#F3F0FF;color:#7C5CFC;" aria-hidden="true">&#128138;</div>
+            <h3 class="strategy-category__title" data-i18n="toolkit_pms_supplements">Supplements</h3>
+          </div>
+
+          <div class="strategy-grid">
+
+            <!-- Calcium -->
+            <div class="strategy-card">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Calcium (1000-1200mg/day)</h4>
+                <span class="evidence-badge evidence-badge--strong">Strong Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Calcium is one of the best-studied supplements for PMS. A landmark RCT showed 1200mg/day of calcium carbonate reduced overall PMS symptom scores by 48% compared to placebo. Calcium regulates neurotransmitter release and smooth muscle function. Low calcium intake is independently associated with PMS severity. Can be obtained from dairy, fortified foods, or supplements.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Do not exceed 2500mg/day. Those with kidney stones or hyperparathyroidism should consult their doctor. Take with vitamin D for better absorption. Split doses for best absorption.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Daily dose, which cycle days you took it, overall PMS symptom score each cycle.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vitamin B6 -->
+            <div class="strategy-card">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Vitamin B6 (50-100mg/day)</h4>
+                <span class="evidence-badge evidence-badge--moderate">Moderate Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Vitamin B6 (pyridoxine) is a cofactor in serotonin and dopamine synthesis. A Cochrane review found that B6 at doses of 50-100mg/day improved PMS symptoms, particularly mood-related ones like depression and irritability. B6 may also help with PMS-related bloating. Best results are seen with daily supplementation throughout the cycle, not just the luteal phase.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Do NOT exceed 100mg/day. Long-term high-dose B6 (over 200mg/day) can cause peripheral neuropathy (nerve damage). Stay within recommended range. Consider a B-complex instead of isolated B6.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Daily dose, mood symptom ratings, any tingling or numbness (stop and see doctor if this occurs).</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Magnesium -->
+            <div class="strategy-card">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Magnesium (200-400mg/day)</h4>
+                <span class="evidence-badge evidence-badge--moderate">Moderate Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Magnesium influences serotonin receptors and helps regulate the hypothalamic-pituitary-adrenal (HPA) axis. Studies show magnesium supplementation reduces PMS-related water retention, mood symptoms, and anxiety. The combination of magnesium with vitamin B6 may be more effective than either alone. Magnesium glycinate or citrate forms are best absorbed and least likely to cause GI issues.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Avoid magnesium oxide (poor absorption, more GI side effects). Those with kidney disease should consult a doctor. High doses cause loose stools; start low and increase gradually.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Dose, form, bloating levels, mood scores, sleep quality.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chasteberry -->
+            <div class="strategy-card">
+              <div class="strategy-card__header">
+                <div class="strategy-card__meta"></div>
+              </div>
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Chasteberry (Vitex agnus-castus)</h4>
+                <span class="evidence-badge evidence-badge--moderate">Moderate Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Chasteberry acts on dopamine receptors in the pituitary gland, which may reduce prolactin levels and improve the progesterone-to-estrogen ratio. Several RCTs and a systematic review show it reduces overall PMS symptoms, particularly breast pain, irritability, and mood changes. Standard dose is 20-40mg/day of standardized extract. Benefits may take 2-3 cycles to appear.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Do NOT use with hormonal contraceptives, dopamine-related medications, or during pregnancy. May cause mild GI upset or headache. Discontinue if you develop a rash. Not recommended for PMDD (insufficient evidence).</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Daily dose, breast tenderness, overall PMS score, any side effects. Compare after 3 full cycles.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CLINICAL OPTIONS -->
+        <div class="strategy-category">
+          <div class="strategy-category__header">
+            <div class="strategy-category__icon" style="background:#FFF0F3;color:#E85D75;" aria-hidden="true">&#9877;</div>
+            <h3 class="strategy-category__title" data-i18n="toolkit_pms_clinical">Clinical Options</h3>
+          </div>
+
+          <p class="text-muted mb-6">These options require evaluation and prescription from a healthcare provider. They are particularly important for PMDD, which often does not respond adequately to lifestyle changes alone.</p>
+
+          <div class="strategy-grid">
+
+            <!-- SSRIs -->
+            <div class="strategy-card" style="border-color:var(--color-primary-light);">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">SSRIs for PMDD</h4>
+                <span class="evidence-badge evidence-badge--strong">Strong Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Selective serotonin reuptake inhibitors (fluoxetine, sertraline, paroxetine, escitalopram) are the first-line treatment for PMDD, with response rates of 60-70% in clinical trials. Uniquely for PMDD, SSRIs can work within days rather than the usual weeks, which allows for luteal-phase-only dosing (taking the medication only during the 2 weeks before your period). Both continuous and intermittent dosing are effective.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Prescription only. Side effects may include nausea, headache, sexual dysfunction, or sleep changes. Do not stop abruptly if using continuous dosing. Requires provider monitoring. Not recommended for PMS unless symptoms are severe.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Dosing schedule (continuous vs. luteal-only), symptom scores before and after starting, any side effects, timing of symptom relief.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hormonal Options -->
+            <div class="strategy-card" style="border-color:var(--color-secondary-light);">
+              <div class="strategy-card__top">
+                <h4 class="strategy-card__title">Hormonal Options</h4>
+                <span class="evidence-badge evidence-badge--moderate">Moderate Evidence</span>
+              </div>
+              <p class="strategy-card__desc">Some combined oral contraceptives, particularly those containing drospirenone (like Yaz/Yasmin with a 24/4 dosing regimen), have FDA approval or clinical evidence for PMS/PMDD symptom reduction. By suppressing ovulation and providing steady hormone levels, they reduce the cyclical hormonal fluctuations that trigger symptoms. Continuous use (skipping placebo pills) may provide additional benefit for some.</p>
+              <div class="strategy-card__notes">
+                <div class="strategy-note strategy-note--safety">
+                  <span class="strategy-note__icon" aria-hidden="true">&#9888;</span>
+                  <span><strong>Safety:</strong> Not suitable for everyone. Contraindications include history of blood clots, certain migraines with aura, smoking over age 35. Some people experience mood worsening on hormonal contraceptives. Requires provider evaluation.</span>
+                </div>
+                <div class="strategy-note strategy-note--track">
+                  <span class="strategy-note__icon" aria-hidden="true">&#128200;</span>
+                  <span><strong>Track:</strong> Which formulation, dosing schedule, mood and physical symptom scores monthly, any new side effects.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SELF-ASSESSMENT ===== -->
+    <section id="assessment" class="section bg-gray-50">
+      <div class="container" style="max-width:800px;">
+        <div class="assessment-section">
+          <div class="assessment-header">
+            <h3>Is It PMS or PMDD? Self-Assessment</h3>
+            <p>This is a screening tool only and cannot replace a clinical diagnosis. PMDD diagnosis requires prospective daily symptom tracking for at least 2 consecutive cycles. Answer based on your experience during the 1-2 weeks before your period.</p>
+          </div>
+
+          <div class="assessment-body">
+
+            <div class="alert alert--warning mb-6">
+              <span class="alert__icon" aria-hidden="true">&#9888;</span>
+              <div class="alert__content">
+                <div class="alert__title">Non-Diagnostic Tool</div>
+                <p style="margin:0;">This self-assessment is designed to help you reflect on your symptoms and prepare for a conversation with a healthcare provider. It is not a diagnosis. Only a qualified professional can diagnose PMDD using prospective daily ratings over at least 2 menstrual cycles.</p>
+              </div>
+            </div>
+
+            <!-- Q1 -->
+            <div class="assessment-question">
+              <div class="assessment-question__text">1. How would you describe the intensity of your premenstrual mood symptoms (sadness, irritability, anxiety)?</div>
+              <div class="assessment-options">
+                <label class="assessment-option">
+                  <input type="radio" name="q1" value="mild">
+                  Mild: I notice them but they don't change my behavior much
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q1" value="moderate">
+                  Moderate: They affect my day but I can still function
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q1" value="severe">
+                  Severe: They significantly impair my ability to function normally
+                </label>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="assessment-question">
+              <div class="assessment-question__text">2. Do your premenstrual symptoms cause problems in your relationships, work, or school?</div>
+              <div class="assessment-options">
+                <label class="assessment-option">
+                  <input type="radio" name="q2" value="rarely">
+                  Rarely or never
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q2" value="sometimes">
+                  Sometimes, but I manage
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q2" value="frequently">
+                  Frequently; I've had conflicts, missed work, or withdrawn from others
+                </label>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="assessment-question">
+              <div class="assessment-question__text">3. Do you experience marked mood swings, sudden sadness or tearfulness, or increased sensitivity to rejection?</div>
+              <div class="assessment-options">
+                <label class="assessment-option">
+                  <input type="radio" name="q3" value="no">
+                  Not typically
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q3" value="some">
+                  Somewhat, but it's manageable
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q3" value="yes">
+                  Yes, often intensely, and it feels out of proportion to the situation
+                </label>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="assessment-question">
+              <div class="assessment-question__text">4. Do you feel hopeless, very anxious, or have thoughts of self-harm during the premenstrual phase?</div>
+              <div class="assessment-options">
+                <label class="assessment-option">
+                  <input type="radio" name="q4" value="no">
+                  No
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q4" value="anxiety">
+                  I experience significant anxiety but not hopelessness or self-harm thoughts
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q4" value="yes">
+                  Yes, I have experienced hopelessness or thoughts of self-harm
+                </label>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="assessment-question">
+              <div class="assessment-question__text">5. Do your symptoms clearly start in the luteal phase and improve within a few days of your period starting?</div>
+              <div class="assessment-options">
+                <label class="assessment-option">
+                  <input type="radio" name="q5" value="no">
+                  No, they seem to happen throughout my cycle
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q5" value="mostly">
+                  Mostly, but sometimes they overlap
+                </label>
+                <label class="assessment-option">
+                  <input type="radio" name="q5" value="yes">
+                  Yes, there's a clear pattern tied to my cycle
+                </label>
+              </div>
+            </div>
+
+            <!-- Result areas -->
+            <div id="assessment-result-pms" class="assessment-result assessment-result--pms" role="status">
+              <h4 style="color:var(--color-secondary);margin-bottom:var(--space-2);">Your responses suggest PMS-range symptoms</h4>
+              <p class="text-sm" style="color:var(--color-gray-700);line-height:var(--leading-relaxed);margin:0;">Based on your responses, your symptoms appear to fall within the PMS range. Lifestyle interventions, supplements (especially calcium), and the strategies above are good starting points. If your symptoms worsen or stop responding to self-management, consult a healthcare provider. Consider tracking your symptoms daily for 2-3 cycles to confirm patterns.</p>
+            </div>
+
+            <div id="assessment-result-pmdd" class="assessment-result assessment-result--pmdd" role="status">
+              <h4 style="color:var(--color-primary);margin-bottom:var(--space-2);">Your responses suggest possible PMDD-level symptoms</h4>
+              <p class="text-sm" style="color:var(--color-gray-700);line-height:var(--leading-relaxed);margin-bottom:var(--space-3);">Based on your responses, your symptoms may fall within the PMDD range. We strongly recommend speaking with a healthcare provider who is familiar with PMDD. Bring your tracked symptom data and this self-assessment. PMDD is a treatable condition, and effective options like SSRIs and specialized hormonal approaches exist.</p>
+              <a href="../clinic-pack.html" class="btn btn--primary btn--sm">Prepare for Your Doctor Visit</a>
+            </div>
+
+            <div id="assessment-result-unclear" class="assessment-result assessment-result--pms" role="status">
+              <h4 style="color:var(--color-secondary);margin-bottom:var(--space-2);">More tracking would help clarify your pattern</h4>
+              <p class="text-sm" style="color:var(--color-gray-700);line-height:var(--leading-relaxed);margin:0;">Your responses suggest symptoms that could be PMS, PMDD, or potentially something else (like an underlying mood disorder with premenstrual worsening). The best next step is to track your symptoms daily for at least 2 full cycles, noting intensity and which cycle day symptoms occur. If symptoms are present throughout your cycle (not just premenstrually), mention this to your provider.</p>
+            </div>
+
+            <button id="assessment-submit" class="btn btn--secondary btn--full mt-6">See Preliminary Reflection</button>
+          </div>
+        </div>
+
+        <!-- Crisis resource -->
+        <div class="crisis-banner mt-8">
+          <span class="crisis-banner__icon" aria-hidden="true">&#128147;</span>
+          <div class="crisis-banner__text">
+            <strong>If you are in crisis or having thoughts of self-harm</strong>
+            Please reach out for support. In the US, contact the <a href="tel:988">988 Suicide &amp; Crisis Lifeline</a> (call or text 988) or the <a href="https://www.crisistextline.org/" target="_blank" rel="noopener">Crisis Text Line</a> (text HOME to 741741). You are not alone, and what you're feeling is not your fault. PMDD is a medical condition with effective treatments.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHEN TO SEEK CARE ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h2 data-i18n="toolkit_pms_seekcare_title">When to Seek Care</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">You deserve support. Here are signs that it's time to talk to a healthcare provider.</p>
+        </div>
+
+        <div class="red-flag-card" role="alert">
+          <div class="red-flag-card__header">
+            <span class="red-flag-card__icon" aria-hidden="true">&#128680;</span>
+            <h3 class="red-flag-card__title">Seek Care If You Experience</h3>
+          </div>
+          <ul class="red-flag-card__list">
+            <li>Premenstrual symptoms that cause you to miss work, school, or social obligations</li>
+            <li>Relationship conflicts that regularly occur in the luteal phase</li>
+            <li>Feelings of hopelessness, worthlessness, or suicidal thoughts before your period</li>
+            <li>Severe anxiety or panic attacks that are clearly worse premenstrually</li>
+            <li>Self-medication with alcohol or other substances to cope with premenstrual symptoms</li>
+            <li>Symptoms that have not improved after 2-3 months of consistent lifestyle changes</li>
+            <li>Symptoms that seem to be getting worse over time</li>
+            <li>You're unsure whether symptoms are PMS/PMDD or a different mood disorder</li>
+          </ul>
+        </div>
+
+        <div class="alert alert--info mt-6 mb-8">
+          <span class="alert__icon" aria-hidden="true">&#128161;</span>
+          <div class="alert__content">
+            <div class="alert__title">Your pain and symptoms are real</div>
+            <p style="margin:0;">If a healthcare provider dismisses your concerns, you have every right to seek a second opinion. PMDD is recognized in the DSM-5 and by major medical organizations worldwide. Bring your tracked data, describe the functional impact on your life, and advocate for proper evaluation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOCTOR VISIT PREP ===== -->
+    <section class="section bg-gray-50">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h2 data-i18n="toolkit_pms_doctor_title">Prepare for Your Doctor Visit</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">Walking in prepared makes a difference. Here's what to bring and what to discuss.</p>
+        </div>
+
+        <div class="doctor-prep">
+
+          <div class="doctor-prep-card">
+            <div class="doctor-prep-card__icon" aria-hidden="true">&#128203;</div>
+            <h4 class="doctor-prep-card__title">What to Bring</h4>
+            <ul class="doctor-prep-card__list">
+              <li>2-3 months of daily symptom tracking data</li>
+              <li>Your cycle length and period dates</li>
+              <li>List of current medications and supplements</li>
+              <li>Notes on what you've already tried and how it worked</li>
+              <li>Your PeriodGuide <a href="../clinic-pack.html" style="color:var(--color-primary);">Clinic Pack</a> summary</li>
+            </ul>
+          </div>
+
+          <div class="doctor-prep-card">
+            <div class="doctor-prep-card__icon" aria-hidden="true">&#128172;</div>
+            <h4 class="doctor-prep-card__title">Questions to Ask</h4>
+            <ul class="doctor-prep-card__list">
+              <li>"Based on my tracked data, do my symptoms suggest PMS or PMDD?"</li>
+              <li>"What first-line treatments would you recommend for my specific symptoms?"</li>
+              <li>"Would luteal-phase SSRI dosing be appropriate for me?"</li>
+              <li>"Should I be evaluated for other conditions that mimic PMS/PMDD?"</li>
+              <li>"When should I follow up to assess whether treatment is working?"</li>
+            </ul>
+          </div>
+
+          <div class="doctor-prep-card">
+            <div class="doctor-prep-card__icon" aria-hidden="true">&#127919;</div>
+            <h4 class="doctor-prep-card__title">What to Expect</h4>
+            <ul class="doctor-prep-card__list">
+              <li>Questions about your symptom timeline and severity</li>
+              <li>A review of your medical and family history</li>
+              <li>Possible blood tests to rule out thyroid issues or other causes</li>
+              <li>Discussion of treatment options tailored to your symptoms</li>
+              <li>A follow-up plan to assess treatment effectiveness</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SAFETY DISCLAIMER ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="safety-disclaimer" role="note" aria-label="Medical disclaimer">
+          <div class="safety-disclaimer__icon" aria-hidden="true">&#9888;</div>
+          <div class="safety-disclaimer__text">
+            <strong data-i18n="safety_disclaimer_title">Important Medical Disclaimer</strong>
+            <span data-i18n="safety_disclaimer_text_pms">The information on this page is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. PMS and PMDD are medical conditions that may require professional care. The self-assessment tool is a screening aid only and cannot diagnose PMDD. Always consult a qualified healthcare provider for diagnosis and treatment decisions. If you are experiencing suicidal thoughts or self-harm urges, please contact emergency services or a crisis line immediately.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+          <div class="footer__privacy-badges">
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span data-i18n="privacy_no_trackers">No ad trackers</span>
+            </span>
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Anonymous-first
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_tools">Tools</h4>
+          <ul class="footer__links">
+            <li><a href="../today.html" data-i18n="nav_today">Today's Guide</a></li>
+            <li><a href="../cycle-day.html" data-i18n="nav_cycle_day">Cycle Day Finder</a></li>
+            <li><a href="../track.html" data-i18n="nav_track">Symptom Tracker</a></li>
+            <li><a href="../insights.html" data-i18n="nav_insights">Insights</a></li>
+            <li><a href="../clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_resources">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="cramps.html" data-i18n="toolkit_cramps_title">Cramps Toolkit</a></li>
+            <li><a href="pms-pmdd.html" data-i18n="toolkit_pms_title">PMS & PMDD</a></li>
+            <li><a href="../traditions.html" data-i18n="nav_traditions">Traditions Library</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="../about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="../privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+            <li><a href="../accessibility.html" data-i18n="nav_accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 <span data-i18n="footer_copyright">PeriodGuide.com. All rights reserved.</span></p>
+        <p class="text-sm" data-i18n="safety_red_flag_disclaimer">This is not medical advice. If you're concerned, contact a healthcare provider.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/i18n.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/cycle-tracker.js"></script>
+  <script src="../js/guidance.js"></script>
+  <script src="../js/tracking.js"></script>
+  <script src="../js/insights.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ===== Self-Assessment Logic =====
+      const submitBtn = document.getElementById('assessment-submit');
+      const resultPMS = document.getElementById('assessment-result-pms');
+      const resultPMDD = document.getElementById('assessment-result-pmdd');
+      const resultUnclear = document.getElementById('assessment-result-unclear');
+
+      if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+          // Hide all results first
+          [resultPMS, resultPMDD, resultUnclear].forEach(r => r.classList.remove('visible'));
+
+          // Gather answers
+          const answers = {};
+          for (let i = 1; i <= 5; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            answers[`q${i}`] = selected ? selected.value : null;
+          }
+
+          // Check if all answered
+          const allAnswered = Object.values(answers).every(v => v !== null);
+          if (!allAnswered) {
+            alert('Please answer all questions before viewing your reflection.');
+            return;
+          }
+
+          // Simple scoring logic (non-diagnostic)
+          let pmddIndicators = 0;
+
+          if (answers.q1 === 'severe') pmddIndicators += 2;
+          else if (answers.q1 === 'moderate') pmddIndicators += 1;
+
+          if (answers.q2 === 'frequently') pmddIndicators += 2;
+          else if (answers.q2 === 'sometimes') pmddIndicators += 1;
+
+          if (answers.q3 === 'yes') pmddIndicators += 2;
+          else if (answers.q3 === 'some') pmddIndicators += 1;
+
+          if (answers.q4 === 'yes') pmddIndicators += 3;
+          else if (answers.q4 === 'anxiety') pmddIndicators += 1;
+
+          if (answers.q5 === 'no') pmddIndicators -= 1; // may not be PMS/PMDD at all
+
+          // Show result
+          if (answers.q5 === 'no' || pmddIndicators <= 2) {
+            resultUnclear.classList.add('visible');
+          } else if (pmddIndicators >= 6) {
+            resultPMDD.classList.add('visible');
+          } else {
+            resultPMS.classList.add('visible');
+          }
+
+          // Scroll to result
+          const visibleResult = document.querySelector('.assessment-result.visible');
+          if (visibleResult) {
+            visibleResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      }
+
+      // ===== Symptom Checklist Persistence (localStorage) =====
+      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+      const STORAGE_KEY = 'pg_pms_checklist';
+
+      // Load saved state
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        checkboxes.forEach(cb => {
+          if (saved[cb.id]) cb.checked = true;
+        });
+      } catch (e) { /* ignore parse errors */ }
+
+      // Save on change
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          const state = {};
+          checkboxes.forEach(c => {
+            if (c.checked) state[c.id] = true;
+          });
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+          } catch (e) { /* ignore storage errors */ }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

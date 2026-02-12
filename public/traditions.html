@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Traditions Library — Explore Ayurveda, Traditional Chinese Medicine, and Indigenous approaches to menstrual health. Cultural context, safety warnings, and contraindications included.">
+  <meta name="keywords" content="Ayurveda menstruation, TCM period, Traditional Chinese Medicine cycle, Indigenous menstrual practices, traditional period remedies, holistic menstrual health, abhyanga, acupressure period, menstrual wellness traditions">
+  <meta name="author" content="PeriodGuide">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Traditions Library — PeriodGuide">
+  <meta property="og:description" content="Ancestral approaches to menstrual wellness from Ayurveda, Traditional Chinese Medicine, and Indigenous traditions. Presented with cultural context and safety information.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://periodguide.com/traditions.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Traditions Library — PeriodGuide">
+  <meta name="twitter:description" content="Ancestral approaches to menstrual wellness with cultural context and safety information.">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/traditions.html">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/traditions.html">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/traditions.html">
+  <link rel="alternate" hreflang="x-default" href="https://periodguide.com/traditions.html">
+
+  <link rel="canonical" href="https://periodguide.com/traditions.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/themes.css">
+
+  <title>Traditions Library — PeriodGuide</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Traditions Library: Ancestral Approaches to Menstrual Wellness",
+    "description": "Explore Ayurveda, Traditional Chinese Medicine, and Indigenous approaches to menstrual health with cultural context, safety warnings, and contraindications.",
+    "url": "https://periodguide.com/traditions.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PeriodGuide",
+      "url": "https://periodguide.com"
+    },
+    "mainEntityOfPage": "https://periodguide.com/traditions.html",
+    "about": [
+      { "@type": "Thing", "name": "Ayurveda" },
+      { "@type": "Thing", "name": "Traditional Chinese Medicine" },
+      { "@type": "Thing", "name": "Indigenous Medicine" },
+      { "@type": "Thing", "name": "Menstrual Health" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Ayurvedic view of menstruation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Ayurveda, menstruation is governed by Apana Vata, a downward-moving energy. The menstrual period is considered a natural monthly cleansing process, and rest during this time is encouraged to support the body's natural detoxification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are traditional menstrual practices safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional practices are presented as cultural viewpoints, not medical recommendations. Many have not been evaluated through clinical trials. Always consult a healthcare provider before trying new remedies, especially if you are pregnant, nursing, on medication, or have existing health conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is acupressure point SP6 used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spleen 6 (SP6), located about four finger-widths above the inner ankle, is used in Traditional Chinese Medicine to support menstrual health. Some clinical studies suggest it may help with menstrual discomfort. It is contraindicated during pregnancy."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== Traditions Page Specific Styles ===== */
+
+    /* Hero */
+    .traditions-hero {
+      position: relative;
+      overflow: hidden;
+      padding: var(--space-16) 0 var(--space-12);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .traditions-hero { padding: var(--space-20) 0 var(--space-16); }
+    }
+    .traditions-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .traditions-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .traditions-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(26, 26, 46, 0.82) 0%,
+        rgba(106, 27, 154, 0.65) 50%,
+        rgba(232, 93, 117, 0.55) 100%
+      );
+      z-index: 1;
+    }
+    .traditions-hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .traditions-hero__title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-extrabold);
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: var(--space-4);
+      text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    @media (min-width: 768px) {
+      .traditions-hero__title { font-size: var(--text-5xl); }
+    }
+    @media (min-width: 1024px) {
+      .traditions-hero__title { font-size: var(--text-6xl); }
+    }
+    .traditions-hero__subtitle {
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: var(--leading-relaxed);
+      text-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Disclaimer */
+    .traditions-disclaimer {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+      padding: var(--space-5) var(--space-6);
+      background: linear-gradient(135deg, #FFF8E1, #FFF3E0);
+      border: 2px solid #FFB74D;
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-10);
+      box-shadow: var(--shadow-sm);
+    }
+    [data-theme="dark"] .traditions-disclaimer {
+      background: linear-gradient(135deg, rgba(230, 81, 0, 0.12), rgba(255, 152, 0, 0.08));
+      border-color: rgba(255, 183, 77, 0.4);
+    }
+    .traditions-disclaimer__icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 152, 0, 0.15);
+      border-radius: var(--radius-lg);
+      font-size: 1.5rem;
+    }
+    .traditions-disclaimer__content {
+      flex: 1;
+    }
+    .traditions-disclaimer__title {
+      font-size: var(--text-base);
+      font-weight: var(--weight-bold);
+      color: #E65100;
+      margin-bottom: var(--space-2);
+    }
+    [data-theme="dark"] .traditions-disclaimer__title {
+      color: #FFB74D;
+    }
+    .traditions-disclaimer__text {
+      font-size: var(--text-sm);
+      color: #BF360C;
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+    [data-theme="dark"] .traditions-disclaimer__text {
+      color: #FFCC80;
+    }
+
+    /* Tradition tabs */
+    .tradition-tabs {
+      display: flex;
+      gap: var(--space-2);
+      border-bottom: 2px solid var(--color-gray-200);
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 0;
+      margin-bottom: var(--space-8);
+    }
+    .tradition-tabs::-webkit-scrollbar { display: none; }
+    .tradition-tab {
+      padding: var(--space-3) var(--space-5);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-gray-600);
+      border: none;
+      background: none;
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: all var(--transition-fast);
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+    @media (min-width: 768px) {
+      .tradition-tab {
+        padding: var(--space-4) var(--space-6);
+        font-size: var(--text-base);
+      }
+    }
+    .tradition-tab:hover {
+      color: var(--color-primary);
+      background: var(--color-primary-pale);
+    }
+    .tradition-tab.active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+      background: var(--color-primary-pale);
+    }
+    .tradition-tab__icon {
+      font-size: 1.25rem;
+    }
+
+    /* Tab panels */
+    .tradition-panel {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .tradition-panel.active {
+      display: block;
+    }
+
+    /* Tradition intro */
+    .tradition-intro {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: start;
+      margin-bottom: var(--space-10);
+    }
+    @media (min-width: 768px) {
+      .tradition-intro {
+        grid-template-columns: 1fr 1.2fr;
+        gap: var(--space-10);
+      }
+    }
+    .tradition-intro__image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 768px) {
+      .tradition-intro__image { height: 340px; }
+    }
+    .tradition-intro__text h3 {
+      font-family: var(--font-display);
+      font-weight: var(--weight-extrabold);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--space-4);
+    }
+    .tradition-intro__text p {
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* Practice cards grid */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .practice-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1200px) {
+      .practice-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Practice card */
+    .practice-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+    .practice-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+    .practice-card__header {
+      padding: var(--space-5) var(--space-5) var(--space-3);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-3);
+    }
+    .practice-card__icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: var(--color-secondary-pale);
+      border-radius: var(--radius-lg);
+    }
+    .practice-card__header-text {
+      flex: 1;
+    }
+    .practice-card__name {
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      color: var(--color-black);
+      margin-bottom: var(--space-1);
+    }
+    .practice-card__origin {
+      font-size: var(--text-xs);
+      color: var(--color-gray-500);
+      font-weight: var(--weight-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .practice-card__body {
+      padding: 0 var(--space-5) var(--space-5);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .practice-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+    .practice-card__context {
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-secondary-pale);
+      border-radius: var(--radius-lg);
+      border-left: 3px solid var(--color-secondary);
+    }
+    .practice-card__context-label {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-1);
+    }
+    .practice-card__context-text {
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+    .practice-card__safety {
+      padding: var(--space-3) var(--space-4);
+      background: #FFF8E1;
+      border-radius: var(--radius-lg);
+      border-left: 3px solid var(--color-warning);
+    }
+    [data-theme="dark"] .practice-card__safety {
+      background: rgba(230, 81, 0, 0.1);
+    }
+    .practice-card__safety-label {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      color: #E65100;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-1);
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+    [data-theme="dark"] .practice-card__safety-label {
+      color: #FFB74D;
+    }
+    .practice-card__safety-text {
+      font-size: var(--text-xs);
+      color: #BF360C;
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+    [data-theme="dark"] .practice-card__safety-text {
+      color: #FFCC80;
+    }
+    .practice-card__track {
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-gray-50);
+      border-radius: var(--radius-lg);
+      border-left: 3px solid var(--color-follicular);
+    }
+    .practice-card__track-label {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      color: var(--color-follicular);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-1);
+    }
+    .practice-card__track-text {
+      font-size: var(--text-xs);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+
+    /* Indigenous special note */
+    .indigenous-note {
+      padding: var(--space-5) var(--space-6);
+      background: linear-gradient(135deg, var(--color-secondary-pale), var(--color-primary-pale));
+      border: 2px solid var(--color-secondary-light);
+      border-radius: var(--radius-xl);
+      margin-top: var(--space-8);
+    }
+    .indigenous-note__title {
+      font-size: var(--text-base);
+      font-weight: var(--weight-bold);
+      color: var(--color-secondary);
+      margin-bottom: var(--space-2);
+    }
+    .indigenous-note__text {
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+
+    /* Theme cards for Indigenous section */
+    .theme-card {
+      padding: var(--space-5) var(--space-6);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-base);
+    }
+    .theme-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .theme-card__icon {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-3);
+    }
+    .theme-card__name {
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      color: var(--color-black);
+      margin-bottom: var(--space-2);
+    }
+    .theme-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-3);
+    }
+    .theme-card__note {
+      font-size: var(--text-xs);
+      color: var(--color-gray-500);
+      font-style: italic;
+      line-height: var(--leading-relaxed);
+    }
+
+    /* Compare Viewpoints */
+    .compare-panel {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .compare-panel__header {
+      padding: var(--space-6);
+      background: linear-gradient(135deg, var(--color-primary-pale), var(--color-secondary-pale));
+      border-bottom: 1px solid var(--color-gray-200);
+      text-align: center;
+    }
+    .compare-panel__title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-extrabold);
+      color: var(--color-black);
+      margin-bottom: var(--space-2);
+    }
+    @media (min-width: 768px) {
+      .compare-panel__title { font-size: var(--text-3xl); }
+    }
+    .compare-panel__subtitle {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      margin: 0;
+    }
+    .compare-panel__topic {
+      text-align: center;
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-gray-50);
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    .compare-panel__topic-label {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      color: var(--color-gray-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: var(--space-1);
+    }
+    .compare-panel__topic-name {
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      color: var(--color-primary);
+      margin: 0;
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    @media (min-width: 768px) {
+      .compare-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .compare-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .compare-item {
+      padding: var(--space-5) var(--space-6);
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    @media (min-width: 768px) {
+      .compare-item {
+        border-right: 1px solid var(--color-gray-200);
+        border-bottom: 1px solid var(--color-gray-200);
+      }
+      .compare-item:nth-child(2n) { border-right: none; }
+    }
+    @media (min-width: 1024px) {
+      .compare-item {
+        border-right: 1px solid var(--color-gray-200);
+        border-bottom: none;
+      }
+      .compare-item:last-child { border-right: none; }
+    }
+    .compare-item__system {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: var(--space-2);
+    }
+    .compare-item__system--western { color: #1565C0; }
+    .compare-item__system--ayurveda { color: #E65100; }
+    .compare-item__system--tcm { color: #2E7D32; }
+    .compare-item__system--indigenous { color: #6A1B9A; }
+    .compare-item__view {
+      font-size: var(--text-base);
+      font-weight: var(--weight-semibold);
+      color: var(--color-black);
+      margin-bottom: var(--space-2);
+    }
+    .compare-item__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-3);
+    }
+    .compare-item__approach {
+      font-size: var(--text-xs);
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-gray-50);
+      border-radius: var(--radius-md);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+    }
+    .compare-item__approach strong {
+      color: var(--color-black);
+    }
+
+    /* Safety section */
+    .safety-section {
+      background: linear-gradient(135deg, #FFEBEE, #FFF8E1);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8) var(--space-6);
+      border: 1px solid #FFCDD2;
+    }
+    [data-theme="dark"] .safety-section {
+      background: linear-gradient(135deg, rgba(198, 40, 40, 0.1), rgba(230, 81, 0, 0.08));
+      border-color: rgba(239, 154, 154, 0.2);
+    }
+    @media (min-width: 768px) {
+      .safety-section { padding: var(--space-10) var(--space-8); }
+    }
+    .safety-section__title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-extrabold);
+      color: #C62828;
+      margin-bottom: var(--space-6);
+      text-align: center;
+    }
+    [data-theme="dark"] .safety-section__title {
+      color: #EF9A9A;
+    }
+    @media (min-width: 768px) {
+      .safety-section__title { font-size: var(--text-3xl); }
+    }
+    .safety-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .safety-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .safety-card {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5) var(--space-6);
+      border: 1px solid var(--color-gray-200);
+    }
+    .safety-card__icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-3);
+    }
+    .safety-card__title {
+      font-size: var(--text-base);
+      font-weight: var(--weight-bold);
+      color: #C62828;
+      margin-bottom: var(--space-3);
+    }
+    [data-theme="dark"] .safety-card__title {
+      color: #EF9A9A;
+    }
+    .safety-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .safety-card li {
+      padding: var(--space-2) 0;
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      border-bottom: 1px solid var(--color-gray-100);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+    }
+    .safety-card li:last-child { border-bottom: none; }
+    .safety-card li::before {
+      content: '';
+      display: inline-block;
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      margin-top: 8px;
+      border-radius: var(--radius-full);
+      background: #C62828;
+    }
+    [data-theme="dark"] .safety-card li::before {
+      background: #EF9A9A;
+    }
+
+    /* Section divider */
+    .section-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      border-radius: var(--radius-full);
+      margin: 0 auto var(--space-6);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="PeriodGuide Home">
+        <div class="nav__logo-icon" aria-hidden="true">P</div>
+        <span>PeriodGuide</span>
+      </a>
+
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="/" role="menuitem" data-i18n="nav_home">Home</a></li>
+        <li role="none"><a href="today.html" role="menuitem" data-i18n="nav_today">Today's Guide</a></li>
+        <li role="none"><a href="cycle-day.html" role="menuitem" data-i18n="nav_cycle_day">Cycle Day</a></li>
+        <li role="none"><a href="track.html" role="menuitem" data-i18n="nav_track">Track</a></li>
+        <li role="none"><a href="insights.html" role="menuitem" data-i18n="nav_insights">Insights</a></li>
+        <li role="none"><a href="toolkits/cramps.html" role="menuitem" data-i18n="nav_toolkits">Toolkits</a></li>
+        <li role="none"><a href="traditions.html" role="menuitem" class="active" data-i18n="nav_traditions">Traditions</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-switcher__btn" data-lang="es" aria-label="Espa&ntilde;ol">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr" aria-label="Fran&ccedil;ais">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="/" data-i18n="nav_home">Home</a></li>
+      <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+      <li><a href="cycle-day.html" data-i18n="nav_cycle_day">Cycle Day</a></li>
+      <li><a href="track.html" data-i18n="nav_track">Track</a></li>
+      <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+      <li><a href="toolkits/cramps.html" data-i18n="nav_toolkits">Toolkits</a></li>
+      <li><a href="traditions.html" class="active" data-i18n="nav_traditions">Traditions</a></li>
+      <li><a href="clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+      <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+    </ul>
+    <div class="lang-switcher" style="margin-top:var(--space-6);justify-content:center;">
+      <button class="lang-switcher__btn active" data-lang="en">EN</button>
+      <button class="lang-switcher__btn" data-lang="es">ES</button>
+      <button class="lang-switcher__btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="traditions-hero" aria-label="Traditions Library hero">
+      <div class="traditions-hero__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&h=600&fit=crop&auto=format"
+             alt="" loading="eager" width="1200" height="600">
+      </div>
+      <div class="traditions-hero__overlay" aria-hidden="true"></div>
+      <div class="container traditions-hero__content">
+        <h1 class="traditions-hero__title" data-i18n="traditions_hero_title">Traditions Library</h1>
+        <p class="traditions-hero__subtitle" data-i18n="traditions_hero_subtitle">Ancestral approaches to menstrual wellness, presented with cultural context, respect, and safety. These are viewpoints from centuries of practice around the world&mdash;not replacements for modern medical care.</p>
+      </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <section class="section" aria-label="Traditions content">
+      <div class="container">
+
+        <!-- Disclaimer -->
+        <div class="traditions-disclaimer" role="alert" aria-label="Important disclaimer">
+          <div class="traditions-disclaimer__icon" aria-hidden="true">&#9888;</div>
+          <div class="traditions-disclaimer__content">
+            <div class="traditions-disclaimer__title" data-i18n="traditions_disclaimer_title">Important: Cultural Viewpoints, Not Medical Advice</div>
+            <p class="traditions-disclaimer__text" data-i18n="traditions_disclaimer_text">The traditional practices on this page are presented as cultural and historical viewpoints, not medical recommendations. They have varying levels of scientific evidence. Always consult a qualified healthcare provider before trying any new remedy, especially if you are pregnant, breastfeeding, taking medication, or have existing health conditions. Check for contraindications and drug interactions with all herbs and supplements.</p>
+          </div>
+        </div>
+
+        <!-- Tradition Tabs -->
+        <div class="tradition-tabs" role="tablist" aria-label="Traditional medicine systems">
+          <button class="tradition-tab active" role="tab" aria-selected="true" aria-controls="panel-ayurveda" id="tab-ayurveda" data-i18n="traditions_tab_ayurveda">
+            <span class="tradition-tab__icon" aria-hidden="true">&#127807;</span>
+            Ayurveda
+          </button>
+          <button class="tradition-tab" role="tab" aria-selected="false" aria-controls="panel-tcm" id="tab-tcm" data-i18n="traditions_tab_tcm">
+            <span class="tradition-tab__icon" aria-hidden="true">&#9775;</span>
+            Traditional Chinese Medicine
+          </button>
+          <button class="tradition-tab" role="tab" aria-selected="false" aria-controls="panel-indigenous" id="tab-indigenous" data-i18n="traditions_tab_indigenous">
+            <span class="tradition-tab__icon" aria-hidden="true">&#127758;</span>
+            Indigenous Practices
+          </button>
+        </div>
+
+        <!-- ===== AYURVEDA PANEL ===== -->
+        <div class="tradition-panel active" role="tabpanel" id="panel-ayurveda" aria-labelledby="tab-ayurveda">
+
+          <!-- Intro -->
+          <div class="tradition-intro">
+            <div>
+              <img src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=600&h=400&fit=crop&auto=format"
+                   alt="Ayurvedic herbs, oils, and natural ingredients arranged on a warm surface"
+                   class="tradition-intro__image" loading="lazy" width="600" height="400">
+            </div>
+            <div class="tradition-intro__text">
+              <h3 data-i18n="traditions_ayurveda_title">The Ayurvedic View of Menstruation</h3>
+              <p data-i18n="traditions_ayurveda_p1">In Ayurveda, the ancient Indian system of medicine dating back over 5,000 years, menstruation is governed by <strong>Apana Vata</strong>&mdash;the downward-moving aspect of the Vata dosha. The menstrual period is considered a natural monthly purification (<em>rajahkala</em>), during which the body is actively cleansing itself. This process is seen as a gift unique to those who menstruate, providing a regular opportunity for physical and emotional renewal that is not available to others.</p>
+              <p data-i18n="traditions_ayurveda_p2">Ayurvedic practitioners emphasize that during menstruation, the body's energy is naturally directed downward and inward. Disrupting this flow through excess physical activity, cold foods, or emotional stress is believed to lead to imbalances that can manifest as painful periods, irregular cycles, or heavier flow. The Ayurvedic approach centres on supporting this natural downward movement through warmth, rest, nourishing foods, and gentle self-care practices.</p>
+            </div>
+          </div>
+
+          <!-- Practice Cards -->
+          <h4 class="mb-6" data-i18n="traditions_practices_heading">Traditional Practices</h4>
+          <div class="practice-grid">
+
+            <!-- Practice 1: Abhyanga -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#128716;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_ayurveda_abhyanga_name">Warm Sesame Oil Massage (Abhyanga)</div>
+                  <div class="practice-card__origin">Ayurveda &middot; Self-care practice</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_ayurveda_abhyanga_desc">Abhyanga is the practice of warm oil self-massage, traditionally using sesame oil. During menstruation, a gentle abdominal massage is believed to pacify Vata dosha, promote healthy downward flow of Apana Vata, ease menstrual cramping, and calm the nervous system. The oil is warmed to body temperature and applied in slow, clockwise circular motions over the lower abdomen, lower back, and inner thighs.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_ayurveda_abhyanga_context">In Ayurvedic tradition, oil is considered deeply nourishing and grounding. Sesame oil specifically is regarded as warming and Vata-pacifying. The practice of daily abhyanga is part of the broader Ayurvedic daily routine (dinacharya), with modifications recommended during menstruation to focus on gentle, downward strokes.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_ayurveda_abhyanga_safety">Avoid if you have a sesame allergy. Do not apply to broken or irritated skin. If you experience very heavy menstrual flow, avoid vigorous abdominal massage. Some Ayurvedic traditions advise minimal massage during the first 1-2 days of the heaviest flow. Use caution with essential oils&mdash;some are contraindicated during pregnancy.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_ayurveda_abhyanga_track">Note whether you tried abhyanga and log any changes in cramp intensity, pain location, mood, and sleep quality before and after. Track consistency over 2-3 cycles to see patterns.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Practice 2: Ginger-Turmeric Tea -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#9749;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_ayurveda_tea_name">Ginger-Turmeric Tea</div>
+                  <div class="practice-card__origin">Ayurveda &middot; Dietary remedy</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_ayurveda_tea_desc">A warm decoction of fresh ginger (Zingiber officinale) and turmeric (Curcuma longa) is one of the most commonly recommended Ayurvedic remedies during menstruation. Ginger is considered a natural digestive aid and warming agent, while turmeric is valued for its anti-inflammatory properties. Together, they are believed to support circulation, ease abdominal discomfort, reduce bloating, and warm the uterine area to promote healthy flow.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_ayurveda_tea_context">Both ginger and turmeric hold sacred status in Indian culture, appearing in Vedic texts and daily cooking. The combination is not unique to menstrual care&mdash;it is a cornerstone of Ayurvedic digestive and immune support year-round. Modern research has explored ginger for dysmenorrhea with some promising results, though studies are often small-scale.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_ayurveda_tea_safety">Ginger may interact with blood-thinning medications (warfarin, aspirin). Turmeric in high concentrations may affect liver function and can interact with diabetes medications. Avoid excessive amounts during pregnancy. If you have gallstones, use turmeric with caution. Stick to culinary amounts (1-2 cups daily) rather than concentrated supplements.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_ayurveda_tea_track">Log cups consumed, timing (before/during period), and any changes in bloating, cramp severity (1-10 scale), nausea, and digestive comfort.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Practice 3: Rest During Menstruation -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#128524;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_ayurveda_rest_name">Rest During Menstruation</div>
+                  <div class="practice-card__origin">Ayurveda &middot; Lifestyle practice</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_ayurveda_rest_desc">Ayurveda strongly recommends reducing physical and mental activity during menstruation. The first three days of the cycle are considered a time for inward focus, rest, and reduced social obligations. This is not seen as weakness but as honouring the body's active cleansing process. Gentle walking is acceptable, but strenuous exercise, heavy lifting, and prolonged standing are discouraged. Adequate sleep and midday rest are encouraged.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_ayurveda_rest_context">The recommendation for menstrual rest exists in many traditional cultures beyond Ayurveda. While some historical menstrual seclusion practices were rooted in stigma, the Ayurvedic framing is one of self-care and respect for a powerful physiological process. Modern reinterpretations emphasize choice and agency: rest when you can, honour your energy levels, and resist the pressure to perform at peak capacity every day of the month.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_ayurveda_rest_safety">Generally safe for everyone. However, if you are using rest as a way to avoid activity due to severe pain that limits daily function, consult a healthcare provider&mdash;this could indicate endometriosis or other conditions requiring medical attention. Light movement is often beneficial for mild cramps.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_ayurveda_rest_track">Track energy levels, hours of sleep, activity level, and overall wellbeing on days you rest more versus days you maintain normal activity. Compare across cycles.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Practice 4: Dietary Guidelines -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#127858;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_ayurveda_diet_name">Menstrual Dietary Guidelines</div>
+                  <div class="practice-card__origin">Ayurveda &middot; Nutrition</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_ayurveda_diet_desc">During menstruation, Ayurveda recommends warm, cooked, easily digestible foods to support Agni (digestive fire) without taxing the body. Favoured foods include warm soups, cooked grains (rice, oats), root vegetables, ghee, and gentle spices like cumin, coriander, and fennel. Cold, raw, heavy, or highly processed foods are discouraged, as they are believed to increase Vata and Kapha imbalances that may worsen cramps, bloating, and fatigue.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_ayurveda_diet_context">Ayurvedic dietary principles are deeply tied to the concept of the six tastes (sweet, sour, salty, bitter, pungent, astringent) and their effects on the doshas. During menstruation, sweet, sour, and salty tastes are mildly favoured as they pacify Vata. This philosophy differs from Western nutritional science but shares common ground in recommending warm, anti-inflammatory foods during the menstrual phase.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_ayurveda_diet_safety">Generally safe. Ensure nutritional adequacy&mdash;do not overly restrict food groups. If you have diabetes or blood sugar concerns, monitor how dietary changes affect glucose levels. Those with eating disorders should approach any dietary framework with caution and professional guidance.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_ayurveda_diet_track">Log meals (warm vs. cold, cooked vs. raw), and correlate with bloating, cramp intensity, energy, and bowel comfort. Track for at least 3 cycles for meaningful patterns.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Practice 5: Pranayama -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#128168;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_ayurveda_pranayama_name">Breathing Exercises (Pranayama)</div>
+                  <div class="practice-card__origin">Ayurveda &amp; Yoga &middot; Breathwork</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_ayurveda_pranayama_desc">Gentle pranayama (breathing exercises) are recommended during menstruation to calm the nervous system and support Apana Vata's downward movement. <strong>Nadi Shodhana</strong> (alternate nostril breathing) is the most commonly recommended practice, believed to balance the left and right energy channels and promote deep relaxation. <strong>Bhramari</strong> (humming bee breath) is also used for its calming vibration. Vigorous pranayama like Kapalabhati and Bhastrika are traditionally avoided during the menstrual period.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_ayurveda_pranayama_context">Pranayama is one of the eight limbs of yoga described by Patanjali. The menstrual modifications reflect the Ayurvedic principle that the body's energy should not be forcefully redirected during menstruation. Modern stress research supports the general benefits of slow, rhythmic breathing for activating the parasympathetic nervous system, which may help with menstrual pain perception.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_ayurveda_pranayama_safety">Gentle pranayama is generally safe. Avoid breath retention (kumbhaka) if you feel lightheaded. Do not practice vigorous breathing techniques (Kapalabhati, Bhastrika) during menstruation per traditional guidance. Those with respiratory conditions, anxiety disorders, or pregnancy should consult a qualified practitioner before beginning any pranayama practice.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_ayurveda_pranayama_track">Log practice duration, technique used, and rate your stress/anxiety (1-10) and pain level before and after. Note sleep quality on practice days versus non-practice days.</p>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /practice-grid -->
+        </div><!-- /panel-ayurveda -->
+
+
+        <!-- ===== TCM PANEL ===== -->
+        <div class="tradition-panel" role="tabpanel" id="panel-tcm" aria-labelledby="tab-tcm" hidden>
+
+          <!-- Intro -->
+          <div class="tradition-intro">
+            <div>
+              <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=400&fit=crop&auto=format"
+                   alt="Traditional Chinese Medicine setting with acupuncture needles, herbs, and calming atmosphere"
+                   class="tradition-intro__image" loading="lazy" width="600" height="400">
+            </div>
+            <div class="tradition-intro__text">
+              <h3 data-i18n="traditions_tcm_title">The TCM View of Menstruation</h3>
+              <p data-i18n="traditions_tcm_p1">In Traditional Chinese Medicine (TCM), a system of healing developed over more than 2,500 years, menstruation is understood through the framework of <strong>Qi</strong> (vital energy) and <strong>Blood</strong> (Xue). A healthy menstrual cycle depends on the free flow of Qi and Blood through the body's meridian channels, particularly the Chong Mai (Penetrating Vessel) and Ren Mai (Conception Vessel), which are considered the primary regulators of menstrual function.</p>
+              <p data-i18n="traditions_tcm_p2">Menstrual problems in TCM are often attributed to patterns of disharmony: <strong>Qi stagnation</strong> (leading to cramps and irritability), <strong>Blood stasis</strong> (causing clots and sharp pain), <strong>Blood deficiency</strong> (resulting in light or absent periods), or <strong>Cold in the uterus</strong> (producing dull aching pain relieved by warmth). Treatment aims to restore balance through acupuncture, herbal medicine, dietary therapy, and movement practices like Qigong. TCM practitioners customize treatments based on individual pattern diagnosis, not a one-size-fits-all approach.</p>
+            </div>
+          </div>
+
+          <!-- Practice Cards -->
+          <h4 class="mb-6" data-i18n="traditions_practices_heading">Traditional Practices</h4>
+          <div class="practice-grid">
+
+            <!-- TCM Practice 1: Acupressure -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#128073;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_tcm_acupressure_name">Acupressure Points (SP6 &amp; LI4)</div>
+                  <div class="practice-card__origin">TCM &middot; Bodywork</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_tcm_acupressure_desc"><strong>Spleen 6 (SP6 / Sanyinjiao)</strong> is located four finger-widths above the inner ankle bone, behind the tibia. It is considered the meeting point of three Yin meridians and is one of the most important points for menstrual health in TCM. It is used to invigorate Blood, regulate the uterus, and ease menstrual pain. <strong>Large Intestine 4 (LI4 / Hegu)</strong>, located in the web between thumb and index finger, is a major Qi-moving point used for general pain relief and to promote the smooth flow of energy throughout the body. Apply firm but comfortable pressure for 1-3 minutes per point, breathing deeply.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_tcm_acupressure_context">Acupressure and acupuncture are among the most well-studied components of TCM. Several clinical trials have investigated SP6 for dysmenorrhea with moderately positive results, though study quality varies. SP6 is one of the few traditional points that has crossed into integrative medicine practice in some Western clinical settings.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_tcm_acupressure_safety"><strong>SP6 and LI4 are strongly contraindicated during pregnancy</strong> as they are traditionally believed to stimulate uterine contractions. Do not use on broken skin, varicose veins, or areas of inflammation. If you have a bleeding disorder, use gentle pressure only. Stop if you experience increased pain or dizziness.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_tcm_acupressure_track">Rate pain before and after acupressure (1-10 scale), note duration of relief, which points used, and any changes in flow or cramp pattern. Compare across multiple cycles.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- TCM Practice 2: Warming Foods -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#127858;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_tcm_warming_name">Warming Foods &amp; Dietary Therapy</div>
+                  <div class="practice-card__origin">TCM &middot; Nutrition</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_tcm_warming_desc">TCM classifies foods by their thermal nature (hot, warm, neutral, cool, cold) rather than just nutritional content. During menstruation, warming and blood-nourishing foods are prioritized to prevent Cold from accumulating in the uterus. Recommended foods include ginger, cinnamon, red dates (jujubes), goji berries, dark leafy greens, bone broth, black sesame seeds, and lamb. Cold and raw foods, iced drinks, and excessive dairy are discouraged, as they are believed to slow circulation and promote stagnation.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_tcm_warming_context">Food-as-medicine is a foundational principle of TCM. The thermal classification system is distinct from Western nutritional science but reflects centuries of clinical observation. In Chinese culture, drinking warm water and avoiding cold food during menstruation is common practice extending well beyond formal TCM consultation. Red date and ginger tea is a ubiquitous household remedy across East and Southeast Asia.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_tcm_warming_safety">Generally safe as a dietary approach. Ginger and cinnamon in large therapeutic doses may interact with blood thinners and diabetes medications. Those with Heat-pattern conditions (as diagnosed in TCM) may not benefit from additional warming foods. Ensure nutritional balance across all food groups.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_tcm_warming_track">Log warm vs. cold food intake, temperature of beverages, and correlate with cramp severity, clotting, and overall comfort. Note if cold food avoidance coincides with symptom changes.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- TCM Practice 3: Moxibustion -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#128293;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_tcm_moxa_name">Moxibustion Overview</div>
+                  <div class="practice-card__origin">TCM &middot; Heat therapy</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_tcm_moxa_desc">Moxibustion involves burning dried mugwort (Artemisia vulgaris) near specific acupuncture points to warm them and promote the flow of Qi and Blood. For menstrual health, it is most commonly applied to points on the lower abdomen (especially <strong>CV4 / Guanyuan</strong> and <strong>CV6 / Qihai</strong>) and the lower back. The gentle radiant heat is believed to dispel Cold from the uterus, invigorate Blood circulation, and ease dull, aching menstrual pain that improves with warmth. Indirect moxibustion (holding the moxa stick above the skin) is the safest self-care form.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_tcm_moxa_context">Moxibustion is one of the oldest practices in Chinese medicine, mentioned alongside acupuncture in the earliest medical texts. The Chinese term for acupuncture (zhenjiu) literally means "needle and moxa." Some preliminary clinical research has explored moxibustion for primary dysmenorrhea, with mixed but generally positive results. The practice requires training and proper safety precautions.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_tcm_moxa_safety"><strong>Should be performed by or learned from a trained practitioner.</strong> Risk of burns if improperly used. Do not use on broken skin or inflamed areas. Contraindicated during pregnancy, for those with Heat conditions (TCM diagnosis), or during heavy menstrual flow. The smoke may irritate those with asthma or respiratory conditions. Use smokeless moxa sticks in enclosed spaces. Never leave burning moxa unattended.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_tcm_moxa_track">Log treatment dates, points used, duration, and rate your pain and warmth sensation before/after. Note if your cramp quality changes (sharp to dull, or resolved) across sessions.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- TCM Practice 4: Herbal Formulas -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#127811;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_tcm_herbs_name">Herbal Formulas Overview</div>
+                  <div class="practice-card__origin">TCM &middot; Herbal medicine</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_tcm_herbs_desc">TCM herbal medicine uses complex multi-herb formulas tailored to individual diagnosis. Classic formulas for menstrual health include <strong>Si Wu Tang</strong> (Four Substance Decoction) for Blood nourishing, <strong>Tao Hong Si Wu Tang</strong> for Blood stasis, and <strong>Wen Jing Tang</strong> (Warm the Menses Decoction) for Cold-type menstrual pain. These formulas typically contain 4-12 herbs that work synergistically. They are prescribed based on pattern differentiation, not symptom alone.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_tcm_herbs_context">Chinese herbal medicine is one of the most complex pharmacological traditions in the world, with thousands of years of clinical documentation. Formulas are rarely used as isolated herbs&mdash;the multi-herb approach is designed so that herbs balance each other's effects and reduce side effects. This complexity is also why self-prescribing is strongly discouraged.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_tcm_herbs_safety"><strong>Do not self-prescribe Chinese herbal formulas.</strong> Always consult a licensed TCM practitioner or integrative medicine provider. Herbal formulas can interact with pharmaceutical medications including hormonal contraceptives, blood thinners, antidepressants, and blood pressure medications. Quality control varies between suppliers&mdash;use only reputable, tested sources. Contraindicated during pregnancy unless specifically prescribed by a qualified practitioner. Report all herbal use to your primary healthcare provider.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_tcm_herbs_track">If prescribed by a practitioner: log formula name, dosage, timing, and all symptoms including unexpected changes. Note any digestive effects, cycle timing shifts, or changes in flow quality.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- TCM Practice 5: Qigong -->
+            <article class="practice-card animate-on-scroll">
+              <div class="practice-card__header">
+                <div class="practice-card__icon" aria-hidden="true">&#129495;</div>
+                <div class="practice-card__header-text">
+                  <div class="practice-card__name" data-i18n="traditions_tcm_qigong_name">Gentle Movement (Qigong)</div>
+                  <div class="practice-card__origin">TCM &middot; Movement therapy</div>
+                </div>
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+              <div class="practice-card__body">
+                <p class="practice-card__desc" data-i18n="traditions_tcm_qigong_desc">Qigong (literally "energy work") is a system of gentle movement, breathing, and meditation rooted in Chinese philosophy. During menstruation, slow, flowing Qigong sequences are recommended to promote Qi circulation without depleting energy. Practices focusing on the lower Dan Tian (energy centre below the navel) are considered especially beneficial. Gentle hip circles, spinal waves, and slow walking Qigong help maintain the smooth flow of Qi and Blood while respecting the body's need for conservation during this phase.</p>
+                <div class="practice-card__context">
+                  <div class="practice-card__context-label" data-i18n="traditions_cultural_context">Cultural Context</div>
+                  <p class="practice-card__context-text" data-i18n="traditions_tcm_qigong_context">Qigong has been practiced in China for thousands of years and encompasses thousands of styles. Women's Qigong (Nu Zi Qigong) is a specific branch that addresses menstrual health, fertility, and hormonal balance through targeted movement sequences. Unlike vigorous exercise, Qigong emphasizes cultivating and conserving energy rather than expending it, which aligns with the TCM principle of nurturing Yin during menstruation.</p>
+                </div>
+                <div class="practice-card__safety">
+                  <div class="practice-card__safety-label">
+                    <span aria-hidden="true">&#9888;</span>
+                    <span data-i18n="traditions_safety_label">Safety &amp; Contraindications</span>
+                  </div>
+                  <p class="practice-card__safety-text" data-i18n="traditions_tcm_qigong_safety">Gentle Qigong is generally very safe. Avoid inverted postures or strenuous standing postures if experiencing dizziness or heavy flow. If you feel lightheaded during practice, sit or lie down. Those with joint conditions should modify movements as needed. Learn from a qualified instructor initially to ensure proper form.</p>
+                </div>
+                <div class="practice-card__track">
+                  <div class="practice-card__track-label" data-i18n="traditions_track_label">What to Track</div>
+                  <p class="practice-card__track-text" data-i18n="traditions_tcm_qigong_track">Log practice duration and type, energy level before/after (1-10), mood, pain changes, and overall sense of wellbeing. Note any improvements in stress or sleep on practice days.</p>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /practice-grid -->
+        </div><!-- /panel-tcm -->
+
+
+        <!-- ===== INDIGENOUS PRACTICES PANEL ===== -->
+        <div class="tradition-panel" role="tabpanel" id="panel-indigenous" aria-labelledby="tab-indigenous" hidden>
+
+          <!-- Intro -->
+          <div class="tradition-intro">
+            <div>
+              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&h=400&fit=crop&auto=format"
+                   alt="Expansive natural landscape with lush vegetation and open sky"
+                   class="tradition-intro__image" loading="lazy" width="600" height="400">
+            </div>
+            <div class="tradition-intro__text">
+              <h3 data-i18n="traditions_indigenous_title">Indigenous Approaches to Menstruation</h3>
+              <p data-i18n="traditions_indigenous_p1">Indigenous peoples across every continent have developed their own rich, diverse traditions surrounding menstruation. It is impossible and inappropriate to generalize these into a single system, as they represent hundreds of distinct cultures, languages, and worldviews. What follows are <strong>broad themes</strong> that appear across many (but not all) Indigenous traditions&mdash;themes of connection, community, reverence, and an understanding of menstruation as a time of heightened spiritual and physical power.</p>
+              <p data-i18n="traditions_indigenous_p2">We present these themes with deep respect and the understanding that specific ceremonial practices, songs, plant medicines, and rituals belong to the peoples who created them. Learning about general themes can broaden our perspective on menstrual health, but <strong>specific practices should be learned directly from the communities that hold them</strong>, with their consent and guidance. We encourage readers to approach this section as an invitation to broaden perspective, not to appropriate or extract from cultures that have already endured centuries of disruption.</p>
+            </div>
+          </div>
+
+          <!-- Theme Cards -->
+          <h4 class="mb-6" data-i18n="traditions_themes_heading">Common Themes Across Traditions</h4>
+          <div class="practice-grid">
+
+            <!-- Theme 1: Connection to Nature -->
+            <article class="theme-card animate-on-scroll">
+              <div class="theme-card__icon" aria-hidden="true">&#127763;</div>
+              <div class="theme-card__name" data-i18n="traditions_indigenous_nature_name">Connection to Natural Cycles</div>
+              <p class="theme-card__desc" data-i18n="traditions_indigenous_nature_desc">Many Indigenous traditions draw a direct connection between the menstrual cycle and the lunar cycle, the tides, and the seasons. Menstruation is often called "moon time" and is understood not as an illness or inconvenience but as a powerful alignment with the rhythms of the natural world. This framing invites those who menstruate to see their cycles as part of a larger ecological pattern, fostering respect for the body's wisdom and a sense of belonging within the natural order.</p>
+              <p class="theme-card__note" data-i18n="traditions_indigenous_nature_note">This theme appears in many North American First Nations, Aboriginal Australian, Polynesian, and African traditions, each with their own specific teachings and stories.</p>
+              <div style="margin-top:var(--space-3);">
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+            </article>
+
+            <!-- Theme 2: Community Support -->
+            <article class="theme-card animate-on-scroll">
+              <div class="theme-card__icon" aria-hidden="true">&#129309;</div>
+              <div class="theme-card__name" data-i18n="traditions_indigenous_community_name">Community Support &amp; Women's Circles</div>
+              <p class="theme-card__desc" data-i18n="traditions_indigenous_community_desc">In many Indigenous cultures, menstruation is a communal experience rather than a solitary, hidden one. Women's circles, menstrual lodges, and "moon lodges" provided dedicated space for those who were menstruating to rest, share stories, receive care from other community members, and pass knowledge between generations. These spaces were often considered places of great spiritual power, where visions and insights were heightened. The modern concept of "menstrual circles" draws inspiration from these traditions.</p>
+              <p class="theme-card__note" data-i18n="traditions_indigenous_community_note">Moon lodge traditions are found in Anishinaabe, Lakota, and many other Indigenous North American nations. Similar communal practices exist in African, South American, and Pacific Island cultures.</p>
+              <div style="margin-top:var(--space-3);">
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+            </article>
+
+            <!-- Theme 3: Rest and Ceremony -->
+            <article class="theme-card animate-on-scroll">
+              <div class="theme-card__icon" aria-hidden="true">&#10024;</div>
+              <div class="theme-card__name" data-i18n="traditions_indigenous_ceremony_name">Rest, Ceremony &amp; Spiritual Power</div>
+              <p class="theme-card__desc" data-i18n="traditions_indigenous_ceremony_desc">Many Indigenous traditions view the menstrual period as a time when a person's spiritual power is at its peak. Rather than isolation born of stigma, the practice of stepping back from daily duties is framed as honouring that power&mdash;a recognition that the individual is engaged in a profound physiological and spiritual process. During this time, others in the community take on the menstruating person's duties as an act of respect and support. Ceremony, prayer, and contemplation are often part of this time.</p>
+              <p class="theme-card__note" data-i18n="traditions_indigenous_ceremony_note">The framing of menstruation as a time of power (rather than impurity) is a critical distinction in many Indigenous teachings and stands in contrast to menstrual stigma in many other cultural traditions.</p>
+              <div style="margin-top:var(--space-3);">
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+            </article>
+
+            <!-- Theme 4: Plant Medicine -->
+            <article class="theme-card animate-on-scroll">
+              <div class="theme-card__icon" aria-hidden="true">&#127793;</div>
+              <div class="theme-card__name" data-i18n="traditions_indigenous_plant_name">Plant Medicine &amp; Earth Remedies</div>
+              <p class="theme-card__desc" data-i18n="traditions_indigenous_plant_desc">Nearly every Indigenous culture has developed plant-based remedies for menstrual discomfort, drawing on deep botanical knowledge of local flora. Raspberry leaf, cramp bark, black cohosh, yarrow, and countless other plants have been used for centuries in various traditions around the world. These remedies are typically part of a holistic approach that includes dietary practices, physical treatments, and spiritual care. Knowledge of specific plant preparations is often held by healers and knowledge keepers and transmitted through oral tradition.</p>
+              <p class="theme-card__note" data-i18n="traditions_indigenous_plant_note">Important: Specific plant medicine recipes and preparations are proprietary knowledge of specific peoples. Use of plants like white sage, sweetgrass, or peyote outside of their originating cultural context raises significant cultural appropriation concerns. Always source plant knowledge ethically and with community consent.</p>
+              <div style="margin-top:var(--space-3);">
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+              </div>
+            </article>
+
+          </div><!-- /practice-grid -->
+
+          <!-- Indigenous Special Note -->
+          <div class="indigenous-note" role="note" aria-label="Important note about Indigenous practices">
+            <div class="indigenous-note__title" data-i18n="traditions_indigenous_note_title">A Note on Specificity and Respect</div>
+            <p class="indigenous-note__text" data-i18n="traditions_indigenous_note_text">The themes above are broad generalizations drawn from a vast and diverse landscape of Indigenous knowledge systems. <strong>Specific practices, ceremonies, songs, and plant medicine preparations belong to specific peoples and should be learned from those communities directly</strong>, ideally through established cultural exchange programs, published works by Indigenous authors, or community-led education. We encourage you to seek out and support Indigenous-led health education initiatives and to approach this knowledge with humility, gratitude, and a commitment to learning rather than extracting.</p>
+          </div>
+
+        </div><!-- /panel-indigenous -->
+
+      </div><!-- /container -->
+    </section>
+
+
+    <!-- ===== COMPARE VIEWPOINTS ===== -->
+    <section class="section bg-gray-50" aria-label="Compare viewpoints across traditions">
+      <div class="container">
+        <div class="text-center mb-8">
+          <div class="section-divider" aria-hidden="true"></div>
+          <h2 data-i18n="traditions_compare_title">Compare Viewpoints</h2>
+          <p class="text-lg text-muted" style="max-width:650px;margin:0 auto;" data-i18n="traditions_compare_subtitle">How different systems of knowledge understand the same experience. No single viewpoint holds the complete picture&mdash;each offers a unique lens for understanding menstrual health.</p>
+        </div>
+
+        <div class="compare-panel">
+          <div class="compare-panel__topic">
+            <div class="compare-panel__topic-label" data-i18n="traditions_compare_topic_label">Topic</div>
+            <p class="compare-panel__topic-name" data-i18n="traditions_compare_topic">Menstrual Pain (Dysmenorrhea)</p>
+          </div>
+          <div class="compare-grid">
+
+            <!-- Western Clinical -->
+            <div class="compare-item">
+              <div class="compare-item__system compare-item__system--western" data-i18n="traditions_compare_western_label">Western Clinical</div>
+              <div class="compare-item__view" data-i18n="traditions_compare_western_view">Prostaglandin-Driven Inflammation</div>
+              <p class="compare-item__desc" data-i18n="traditions_compare_western_desc">Pain is caused by elevated prostaglandins triggering uterine contractions and ischemia (reduced blood flow). Primary dysmenorrhea has no underlying pathology; secondary dysmenorrhea may indicate endometriosis, fibroids, or adenomyosis.</p>
+              <div class="compare-item__approach">
+                <strong data-i18n="traditions_compare_approach">Typical approach:</strong>
+                <span data-i18n="traditions_compare_western_approach"> NSAIDs (ibuprofen), hormonal contraceptives, heat therapy, exercise. Investigate with ultrasound or laparoscopy if severe.</span>
+              </div>
+            </div>
+
+            <!-- Ayurveda -->
+            <div class="compare-item">
+              <div class="compare-item__system compare-item__system--ayurveda" data-i18n="traditions_compare_ayurveda_label">Ayurveda</div>
+              <div class="compare-item__view" data-i18n="traditions_compare_ayurveda_view">Vata Imbalance &amp; Apana Vayu Disruption</div>
+              <p class="compare-item__desc" data-i18n="traditions_compare_ayurveda_desc">Menstrual pain results from aggravated Vata dosha disrupting the natural downward flow of Apana Vayu. Contributing factors include cold food, anxiety, irregular routine, suppression of natural urges, and excess physical activity during menstruation.</p>
+              <div class="compare-item__approach">
+                <strong data-i18n="traditions_compare_approach">Typical approach:</strong>
+                <span data-i18n="traditions_compare_ayurveda_approach"> Warm oil massage (abhyanga), Vata-pacifying diet, rest, gentle pranayama, herbal preparations like Dashamoola or Ashoka. Warmth and routine.</span>
+              </div>
+            </div>
+
+            <!-- TCM -->
+            <div class="compare-item">
+              <div class="compare-item__system compare-item__system--tcm" data-i18n="traditions_compare_tcm_label">Traditional Chinese Medicine</div>
+              <div class="compare-item__view" data-i18n="traditions_compare_tcm_view">Qi Stagnation, Blood Stasis, or Cold Obstruction</div>
+              <p class="compare-item__desc" data-i18n="traditions_compare_tcm_desc">Pain arises when Qi and Blood cannot flow freely through the uterus. Sharp, stabbing pain suggests Blood stasis; dull, heavy pain relieved by warmth suggests Cold accumulation; distending pain with irritability suggests Liver Qi stagnation. Each pattern requires different treatment.</p>
+              <div class="compare-item__approach">
+                <strong data-i18n="traditions_compare_approach">Typical approach:</strong>
+                <span data-i18n="traditions_compare_tcm_approach"> Acupuncture, moxibustion, herbal formulas (e.g., Shao Fu Zhu Yu Tang for Cold-stasis), warming foods, acupressure on SP6, gentle Qigong. Pattern-specific treatment.</span>
+              </div>
+            </div>
+
+            <!-- Indigenous -->
+            <div class="compare-item">
+              <div class="compare-item__system compare-item__system--indigenous" data-i18n="traditions_compare_indigenous_label">Indigenous Perspectives</div>
+              <div class="compare-item__view" data-i18n="traditions_compare_indigenous_view">Disconnection from Natural Rhythm</div>
+              <p class="compare-item__desc" data-i18n="traditions_compare_indigenous_desc">In many Indigenous frameworks, menstrual pain can reflect a disconnection from natural rhythms, the body's call for rest and attention, or an imbalance in one's relationship with community and the earth. Pain is often seen as a signal to slow down and listen, not as something to be suppressed.</p>
+              <div class="compare-item__approach">
+                <strong data-i18n="traditions_compare_approach">Typical approach:</strong>
+                <span data-i18n="traditions_compare_indigenous_approach"> Rest and withdrawal from daily duties, plant-based remedies specific to the local tradition, community support (women's circles), reconnection with nature, ceremony and prayer.</span>
+              </div>
+            </div>
+
+          </div><!-- /compare-grid -->
+        </div><!-- /compare-panel -->
+
+      </div>
+    </section>
+
+
+    <!-- ===== SAFETY SECTION ===== -->
+    <section class="section" aria-label="Safety information and contraindications">
+      <div class="container">
+        <div class="safety-section">
+          <h2 class="safety-section__title" data-i18n="traditions_safety_title">Safety, Contraindications &amp; Warnings</h2>
+          <div class="section-divider" aria-hidden="true" style="background:linear-gradient(90deg, #C62828, #E65100);margin-bottom:var(--space-8);"></div>
+
+          <div class="safety-grid">
+
+            <!-- Contraindications -->
+            <div class="safety-card" aria-label="General contraindications">
+              <div class="safety-card__icon" aria-hidden="true">&#128683;</div>
+              <h3 class="safety-card__title" data-i18n="traditions_safety_contra_title">General Contraindications</h3>
+              <ul>
+                <li data-i18n="traditions_safety_contra_1">Do not use acupressure points SP6 or LI4 during pregnancy</li>
+                <li data-i18n="traditions_safety_contra_2">Avoid moxibustion during pregnancy or with Heat-pattern conditions</li>
+                <li data-i18n="traditions_safety_contra_3">Do not self-prescribe herbal formulas&mdash;always consult a qualified practitioner</li>
+                <li data-i18n="traditions_safety_contra_4">If menstrual pain prevents daily function, seek medical evaluation to rule out endometriosis, fibroids, or other conditions</li>
+                <li data-i18n="traditions_safety_contra_5">Those with bleeding disorders should avoid vigorous massage and acupressure</li>
+              </ul>
+            </div>
+
+            <!-- Herb/Supplement Interactions -->
+            <div class="safety-card" aria-label="Herb and supplement interactions">
+              <div class="safety-card__icon" aria-hidden="true">&#128138;</div>
+              <h3 class="safety-card__title" data-i18n="traditions_safety_herbs_title">Herb &amp; Supplement Interactions</h3>
+              <ul>
+                <li data-i18n="traditions_safety_herbs_1"><strong>Blood thinners:</strong> Ginger, turmeric, dong quai, and many Chinese herbs can increase bleeding risk when combined with warfarin, aspirin, or other anticoagulants</li>
+                <li data-i18n="traditions_safety_herbs_2"><strong>Hormonal medications:</strong> Some herbs (e.g., black cohosh, dong quai, soy isoflavones) may have estrogenic effects that interact with hormonal contraceptives or HRT</li>
+                <li data-i18n="traditions_safety_herbs_3"><strong>Diabetes medications:</strong> Ginger, turmeric, and cinnamon may affect blood sugar levels&mdash;monitor closely if on diabetic medication</li>
+                <li data-i18n="traditions_safety_herbs_4"><strong>Antidepressants:</strong> St. John's Wort and some TCM formulas can interact with SSRIs and other psychiatric medications</li>
+                <li data-i18n="traditions_safety_herbs_5"><strong>Always disclose</strong> all herbal and supplement use to every healthcare provider you visit</li>
+              </ul>
+            </div>
+
+            <!-- Pregnancy Warnings -->
+            <div class="safety-card" aria-label="Pregnancy warnings">
+              <div class="safety-card__icon" aria-hidden="true">&#129328;</div>
+              <h3 class="safety-card__title" data-i18n="traditions_safety_pregnancy_title">Pregnancy Warnings</h3>
+              <ul>
+                <li data-i18n="traditions_safety_pregnancy_1">Many herbs traditionally used for menstrual health are <strong>contraindicated during pregnancy</strong> as they may stimulate uterine contractions</li>
+                <li data-i18n="traditions_safety_pregnancy_2">Acupressure points SP6 and LI4 should be strictly avoided during pregnancy</li>
+                <li data-i18n="traditions_safety_pregnancy_3">Essential oils (even in massage) have varying safety profiles during pregnancy&mdash;consult a qualified aromatherapist</li>
+                <li data-i18n="traditions_safety_pregnancy_4">If you suspect you may be pregnant, discontinue all herbal remedies and menstrual-specific practices until confirmed and consulting with your provider</li>
+                <li data-i18n="traditions_safety_pregnancy_5">Moxibustion and strong warming therapies are generally contraindicated during pregnancy</li>
+              </ul>
+            </div>
+
+          </div><!-- /safety-grid -->
+
+          <div class="alert alert--danger mt-8" role="alert">
+            <div class="alert__icon" aria-hidden="true">&#9888;</div>
+            <div class="alert__content">
+              <div class="alert__title" data-i18n="traditions_safety_emergency_title">When to Seek Immediate Medical Care</div>
+              <p style="margin:0;" data-i18n="traditions_safety_emergency_text">Seek emergency medical attention if you experience sudden severe pelvic pain, heavy bleeding soaking through a pad/tampon per hour for more than 2 hours, fainting or severe dizziness, fever with pelvic pain, or any allergic reaction to herbs or supplements (difficulty breathing, swelling, rash). Traditional remedies are never a substitute for emergency medical care.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+          <div class="footer__privacy-badges">
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span data-i18n="privacy_no_trackers">No ad trackers</span>
+            </span>
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Anonymous-first
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_tools">Tools</h4>
+          <ul class="footer__links">
+            <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+            <li><a href="cycle-day.html" data-i18n="nav_cycle_day">Cycle Day Finder</a></li>
+            <li><a href="track.html" data-i18n="nav_track">Symptom Tracker</a></li>
+            <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+            <li><a href="clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_resources">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="toolkits/cramps.html" data-i18n="toolkit_cramps_title">Cramps Toolkit</a></li>
+            <li><a href="toolkits/pms-pmdd.html" data-i18n="toolkit_pms_title">PMS & PMDD</a></li>
+            <li><a href="traditions.html" data-i18n="nav_traditions">Traditions Library</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+            <li><a href="accessibility.html" data-i18n="nav_accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 <span data-i18n="footer_copyright">PeriodGuide.com. All rights reserved.</span></p>
+        <p class="text-sm" data-i18n="safety_red_flag_disclaimer">This is not medical advice. If you're concerned, contact a healthcare provider.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cycle-tracker.js"></script>
+  <script src="js/guidance.js"></script>
+  <script src="js/tracking.js"></script>
+  <script src="js/insights.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tab switching
+      const tabs = document.querySelectorAll('.tradition-tab');
+      const panels = document.querySelectorAll('.tradition-panel');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Deactivate all
+          tabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          panels.forEach(p => {
+            p.classList.remove('active');
+            p.setAttribute('hidden', '');
+          });
+
+          // Activate clicked
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          const targetId = tab.getAttribute('aria-controls');
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) {
+            targetPanel.classList.add('active');
+            targetPanel.removeAttribute('hidden');
+          }
+        });
+
+        // Keyboard navigation for tabs
+        tab.addEventListener('keydown', (e) => {
+          const tabList = Array.from(tabs);
+          const currentIndex = tabList.indexOf(tab);
+          let newIndex;
+
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            newIndex = (currentIndex + 1) % tabList.length;
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            newIndex = (currentIndex - 1 + tabList.length) % tabList.length;
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            newIndex = 0;
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            newIndex = tabList.length - 1;
+          }
+
+          if (newIndex !== undefined) {
+            tabList[newIndex].focus();
+            tabList[newIndex].click();
+          }
+        });
+      });
+
+      // Scroll-triggered animations
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('slide-up');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        animateElements.forEach(el => observer.observe(el));
+      } else {
+        // Fallback: show all
+        animateElements.forEach(el => el.classList.add('slide-up'));
+      }
+
+      // Deep link support: check hash for tab
+      const hash = window.location.hash;
+      if (hash) {
+        const tabMap = {
+          '#ayurveda': 'tab-ayurveda',
+          '#tcm': 'tab-tcm',
+          '#indigenous': 'tab-indigenous'
+        };
+        const tabId = tabMap[hash];
+        if (tabId) {
+          const targetTab = document.getElementById(tabId);
+          if (targetTab) targetTab.click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
