@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://periodguide.com/sitemap.xml
+
+# Privacy-first: no crawling of API endpoints
+Disallow: /api/

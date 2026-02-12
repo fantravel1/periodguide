@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="PeriodGuide — Your evidence-based, privacy-first cycle companion. Day-by-day guidance, symptom tracking, and personalized insights for every phase of your menstrual cycle.">
+  <meta name="keywords" content="period tracker, menstrual cycle, cycle guide, period companion, menstrual health, cycle tracking, period pain relief, PMS help">
+  <meta name="author" content="PeriodGuide">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PeriodGuide — Your Cycle, Your Companion">
+  <meta property="og:description" content="Evidence-based guidance for every day of your cycle. Privacy-first. No account required.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://periodguide.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PeriodGuide — Your Cycle, Your Companion">
+  <meta name="twitter:description" content="Evidence-based guidance for every day of your cycle.">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://periodguide.com/">
+
+  <link rel="canonical" href="https://periodguide.com/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/themes.css">
+
+  <title>PeriodGuide — Your Cycle, Your Companion</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PeriodGuide",
+    "description": "Evidence-based, privacy-first menstrual cycle companion with day-by-day guidance, symptom tracking, and personalized insights.",
+    "url": "https://periodguide.com",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": ["Cycle Day Finder", "Daily Guidance", "Symptom Tracking", "Insights Dashboard", "Privacy-First Design"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is PeriodGuide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PeriodGuide is a free, privacy-first menstrual cycle companion that provides evidence-based daily guidance, symptom tracking, and personalized insights for every phase of your cycle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PeriodGuide free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, PeriodGuide is completely free. No account required. Your data stays on your device by default."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does PeriodGuide protect my privacy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PeriodGuide is anonymous-first by design. No email or account required. All data can be stored locally on your device. No ad trackers on health pages. You can export or delete your data at any time."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Homepage-specific styles */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: var(--space-16) 0 var(--space-12);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .hero { padding: var(--space-20) 0 var(--space-16); }
+    }
+    .hero__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .hero__content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-16);
+      }
+    }
+    .hero__text { text-align: center; }
+    @media (min-width: 1024px) {
+      .hero__text { text-align: left; }
+    }
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-extrabold);
+      line-height: 1.1;
+      margin-bottom: var(--space-5);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @media (min-width: 768px) {
+      .hero__title { font-size: var(--text-5xl); }
+    }
+    @media (min-width: 1024px) {
+      .hero__title { font-size: var(--text-6xl); }
+    }
+    .hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-gray-600);
+      max-width: 540px;
+      margin: 0 auto var(--space-8);
+      line-height: var(--leading-relaxed);
+    }
+    @media (min-width: 1024px) {
+      .hero__subtitle { margin: 0 0 var(--space-8); }
+    }
+    .hero__actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      align-items: center;
+    }
+    @media (min-width: 640px) {
+      .hero__actions { flex-direction: row; justify-content: center; }
+    }
+    @media (min-width: 1024px) {
+      .hero__actions { justify-content: flex-start; }
+    }
+    .hero__privacy {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-6);
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      justify-content: center;
+    }
+    @media (min-width: 1024px) {
+      .hero__privacy { justify-content: flex-start; }
+    }
+    .hero__wheel {
+      display: flex;
+      justify-content: center;
+    }
+    .hero__blobs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero__blobs .blob {
+      position: absolute;
+    }
+    .hero__blobs .blob:nth-child(1) {
+      width: 400px; height: 400px;
+      top: -100px; right: -100px;
+      background: var(--color-primary);
+      opacity: 0.08;
+    }
+    .hero__blobs .blob:nth-child(2) {
+      width: 300px; height: 300px;
+      bottom: -50px; left: -50px;
+      background: var(--color-secondary);
+      opacity: 0.06;
+    }
+    .hero__blobs .blob:nth-child(3) {
+      width: 200px; height: 200px;
+      top: 50%; left: 40%;
+      background: var(--color-follicular);
+      opacity: 0.05;
+    }
+
+    /* Interactive Tracker Section */
+    .tracker-section {
+      background: var(--color-gray-50);
+      position: relative;
+    }
+    .tracker__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+    @media (min-width: 1024px) {
+      .tracker__grid {
+        grid-template-columns: 1fr 1.2fr;
+        gap: var(--space-12);
+      }
+    }
+    .tracker__wheel-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-6);
+    }
+    .tracker__wheel {
+      width: 280px;
+      height: 280px;
+    }
+    @media (min-width: 640px) {
+      .tracker__wheel { width: 340px; height: 340px; }
+    }
+    @media (min-width: 768px) {
+      .tracker__wheel { width: 380px; height: 380px; }
+    }
+    .tracker__day-input {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      background: var(--color-white);
+      padding: var(--space-3) var(--space-5);
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-md);
+    }
+    .tracker__day-input label {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-gray-600);
+      white-space: nowrap;
+    }
+    .tracker__day-input input {
+      width: 70px;
+      text-align: center;
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-primary);
+      border: none;
+      background: none;
+      outline: none;
+    }
+    .tracker__day-input input::-webkit-inner-spin-button {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    /* Action cards */
+    .action-card {
+      display: flex;
+      gap: var(--space-4);
+      padding: var(--space-5);
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-gray-200);
+      transition: all var(--transition-base);
+    }
+    .action-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .action-card__icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: var(--color-primary-pale);
+      border-radius: var(--radius-lg);
+    }
+    .action-card__content { flex: 1; }
+    .action-card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-2);
+    }
+    .action-card__title {
+      font-size: var(--text-base);
+      font-weight: var(--weight-semibold);
+      color: var(--color-black);
+      margin: 0;
+    }
+    .action-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin: 0;
+    }
+
+    /* Guidance panel */
+    .guidance-panel__summary {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-6);
+      padding: var(--space-4);
+      background: var(--color-primary-pale);
+      border-radius: var(--radius-lg);
+      border-left: 4px solid var(--color-primary);
+    }
+    .guidance-panel__tips {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+    .guidance-panel__deep {
+      padding: var(--space-5);
+      background: var(--color-secondary-pale);
+      border-radius: var(--radius-lg);
+      border-left: 4px solid var(--color-secondary);
+      margin-bottom: var(--space-6);
+    }
+    .guidance-panel__safety ul {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-2) 0 0;
+    }
+    .guidance-panel__safety li {
+      padding: var(--space-1) 0;
+      font-size: var(--text-sm);
+    }
+
+    /* Features section */
+    .features__card {
+      position: relative;
+      padding: var(--space-8);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+    }
+    .features__card-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-4);
+    }
+
+    /* Phases section */
+    .phases-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 640px) {
+      .phases-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .phases-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .phase-card {
+      padding: var(--space-6);
+      border-radius: var(--radius-xl);
+      text-align: center;
+      transition: all var(--transition-base);
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .phase-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .phase-card.active {
+      border-color: currentColor;
+      box-shadow: var(--shadow-lg);
+    }
+    .phase-card__number {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      font-weight: var(--weight-extrabold);
+      margin-bottom: var(--space-2);
+    }
+    .phase-card__name {
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      margin-bottom: var(--space-2);
+    }
+    .phase-card__days {
+      font-size: var(--text-sm);
+      opacity: 0.7;
+      margin-bottom: var(--space-3);
+    }
+    .phase-card__desc {
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      opacity: 0.85;
+    }
+
+    /* Image sections */
+    .lifestyle-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: var(--radius-2xl);
+    }
+    @media (min-width: 768px) {
+      .lifestyle-img { height: 400px; }
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      text-align: center;
+      padding: var(--space-16) 0;
+      border-radius: var(--radius-2xl);
+      margin: var(--space-12) auto;
+      max-width: var(--container-xl);
+    }
+    @media (min-width: 768px) {
+      .cta-section { padding: var(--space-20) var(--space-8); }
+    }
+    .cta-section h2 {
+      color: white;
+      font-size: var(--text-3xl);
+    }
+    @media (min-width: 768px) {
+      .cta-section h2 { font-size: var(--text-4xl); }
+    }
+
+    /* Mode toggle */
+    .mode-toggle {
+      display: inline-flex;
+      background: var(--color-gray-100);
+      border-radius: var(--radius-full);
+      padding: var(--space-1);
+      gap: var(--space-1);
+    }
+    .mode-toggle__btn {
+      padding: var(--space-2) var(--space-4);
+      border: none;
+      background: transparent;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      color: var(--color-gray-600);
+    }
+    .mode-toggle__btn.active {
+      background: var(--color-white);
+      color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="PeriodGuide Home">
+        <div class="nav__logo-icon" aria-hidden="true">P</div>
+        <span>PeriodGuide</span>
+      </a>
+
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="/" role="menuitem" class="active" data-i18n="nav_home">Home</a></li>
+        <li role="none"><a href="today.html" role="menuitem" data-i18n="nav_today">Today's Guide</a></li>
+        <li role="none"><a href="cycle-day.html" role="menuitem" data-i18n="nav_cycle_day">Cycle Day</a></li>
+        <li role="none"><a href="track.html" role="menuitem" data-i18n="nav_track">Track</a></li>
+        <li role="none"><a href="insights.html" role="menuitem" data-i18n="nav_insights">Insights</a></li>
+        <li role="none"><a href="toolkits/cramps.html" role="menuitem" data-i18n="nav_toolkits">Toolkits</a></li>
+        <li role="none"><a href="traditions.html" role="menuitem" data-i18n="nav_traditions">Traditions</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-switcher__btn" data-lang="es" aria-label="Español">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr" aria-label="Français">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="/" class="active" data-i18n="nav_home">Home</a></li>
+      <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+      <li><a href="cycle-day.html" data-i18n="nav_cycle_day">Cycle Day</a></li>
+      <li><a href="track.html" data-i18n="nav_track">Track</a></li>
+      <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+      <li><a href="toolkits/cramps.html" data-i18n="nav_toolkits">Toolkits</a></li>
+      <li><a href="traditions.html" data-i18n="nav_traditions">Traditions</a></li>
+      <li><a href="clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+      <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+    </ul>
+    <div class="lang-switcher" style="margin-top:var(--space-6);justify-content:center;">
+      <button class="lang-switcher__btn active" data-lang="en">EN</button>
+      <button class="lang-switcher__btn" data-lang="es">ES</button>
+      <button class="lang-switcher__btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero bg-gradient-hero">
+      <div class="hero__blobs" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+      </div>
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__title" data-i18n="hero_title">Your Cycle, Your Companion</h1>
+            <p class="hero__subtitle" data-i18n="hero_subtitle">Evidence-based guidance for every day of your cycle. Not just when you're on your period.</p>
+            <div class="hero__actions">
+              <a href="#tracker" class="btn btn--primary btn--lg" data-i18n="hero_cta">Find My Cycle Day</a>
+              <a href="today.html" class="btn btn--outline btn--lg" data-i18n="hero_cta_secondary">Explore Today's Guide</a>
+            </div>
+            <div class="hero__privacy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span data-i18n="hero_privacy_note">Privacy-first. No account required. Your data stays yours.</span>
+            </div>
+          </div>
+          <div class="hero__wheel animate-on-scroll">
+            <div id="hero-cycle-wheel" class="tracker__wheel" role="img" aria-label="Interactive cycle wheel showing current cycle day"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTERACTIVE TRACKER SECTION ===== -->
+    <section id="tracker" class="tracker-section section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 data-i18n="cdf_title">Where Am I in My Cycle?</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;" data-i18n="cdf_subtitle">Select your cycle day or let us help you figure it out. No app setup needed.</p>
+        </div>
+
+        <div class="tracker__grid">
+          <!-- Left: Cycle Wheel + Day Input -->
+          <div class="tracker__wheel-wrap">
+            <div id="main-cycle-wheel" class="tracker__wheel"></div>
+            <div class="tracker__day-input">
+              <label for="cycle-day-input" data-i18n="cdf_day">Day</label>
+              <input type="number" id="cycle-day-input" min="1" max="45" value="1" aria-label="Cycle day number">
+              <span class="text-sm text-muted">/ 28</span>
+            </div>
+            <p class="text-sm text-muted text-center" style="max-width:300px;" data-i18n="cdf_help_text">Day 1 is the first day of your period bleeding. Count from there.</p>
+
+            <!-- Date picker alternative -->
+            <div class="tracker__date-pick" style="margin-top:var(--space-4);">
+              <label for="last-period-date" class="form-label text-center" data-i18n="cdf_last_period">When did your last period start?</label>
+              <input type="date" id="last-period-date" class="form-input" style="max-width:220px;margin:0 auto;text-align:center;">
+            </div>
+          </div>
+
+          <!-- Right: Today's Guide Preview -->
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 data-i18n="tg_top_actions">Top 3 Actions for Today</h3>
+              <div class="mode-toggle">
+                <button class="mode-toggle__btn active" data-mode="simple" data-i18n="tg_simple_view">Simple</button>
+                <button class="mode-toggle__btn" data-mode="deep" data-i18n="tg_deep_view">Deep Science</button>
+              </div>
+            </div>
+            <div id="guidance-panel"></div>
+            <div style="margin-top:var(--space-6);display:flex;gap:var(--space-3);flex-wrap:wrap;">
+              <a href="today.html" class="btn btn--primary" data-i18n="tg_title">Today's Guide</a>
+              <a href="track.html" class="btn btn--outline" data-i18n="tg_track_today">Track Today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHASES OVERVIEW ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2>Understand Your Four Phases</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">Your cycle isn't just "period or not." It's a rhythm of four distinct phases, each with its own strengths, challenges, and opportunities.</p>
+        </div>
+
+        <div class="phases-grid">
+          <div class="phase-card bg-gradient-menstrual animate-on-scroll" data-phase="menstrual" style="color:var(--color-menstrual);">
+            <div class="phase-card__number">01</div>
+            <div class="phase-card__name" data-i18n="phase_menstrual">Menstrual</div>
+            <div class="phase-card__days">Days 1-5</div>
+            <div class="phase-card__desc" data-i18n="phase_menstrual_desc">Your period is here. Focus on rest, warmth, and gentle nourishment.</div>
+          </div>
+          <div class="phase-card bg-gradient-follicular animate-on-scroll" data-phase="follicular" style="color:var(--color-follicular);">
+            <div class="phase-card__number">02</div>
+            <div class="phase-card__name" data-i18n="phase_follicular">Follicular</div>
+            <div class="phase-card__days">Days 6-13</div>
+            <div class="phase-card__desc" data-i18n="phase_follicular_desc">Energy is rising. Great time for new projects and social activities.</div>
+          </div>
+          <div class="phase-card bg-gradient-ovulation animate-on-scroll" data-phase="ovulation" style="color:var(--color-ovulation);">
+            <div class="phase-card__number">03</div>
+            <div class="phase-card__name" data-i18n="phase_ovulation">Ovulation</div>
+            <div class="phase-card__days">Days 14-16</div>
+            <div class="phase-card__desc" data-i18n="phase_ovulation_desc">Peak energy and confidence. Your body is at its most fertile.</div>
+          </div>
+          <div class="phase-card bg-gradient-luteal animate-on-scroll" data-phase="luteal" style="color:var(--color-luteal);">
+            <div class="phase-card__number">04</div>
+            <div class="phase-card__name" data-i18n="phase_luteal">Luteal</div>
+            <div class="phase-card__days">Days 17-28</div>
+            <div class="phase-card__desc" data-i18n="phase_luteal_desc">Winding down. Honor the need for slower pace and self-care.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIFESTYLE IMAGERY ===== -->
+    <section class="section bg-gray-50">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center;">
+          <div class="animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop&auto=format"
+              alt="Woman practicing yoga in a peaceful setting" class="lifestyle-img" loading="lazy" width="800" height="600">
+          </div>
+          <div class="animate-on-scroll">
+            <h2>Guidance First. Not Just Tracking.</h2>
+            <p class="text-muted">Most period apps make you log data without telling you what to do with it. PeriodGuide is different. We lead with actionable, evidence-based guidance for every day of your cycle, then let you track to refine that guidance over time.</p>
+            <ul style="list-style:none;padding:0;">
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Daily micro-coaching actions
+              </li>
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Evidence-graded recommendations
+              </li>
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Safety guardrails built in
+              </li>
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Multiple viewpoints respected
+              </li>
+            </ul>
+            <a href="today.html" class="btn btn--primary mt-4" data-i18n="hero_cta_secondary">Explore Today's Guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES GRID ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2>Everything You Need. Nothing You Don't.</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">Built for real humans with real cycles. Irregular, postpartum, perimenopausal, teen, or textbook — PeriodGuide adapts to you.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="features__card bg-gradient-menstrual animate-on-scroll">
+            <div class="features__card-icon" style="background:rgba(232,93,117,0.15);">
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=56&h=56&fit=crop&auto=format" alt="" style="border-radius:var(--radius-lg);" width="56" height="56" loading="lazy">
+            </div>
+            <h3>Cramps Toolkit</h3>
+            <p class="text-sm text-muted">Evidence-graded interventions from immediate heat therapy to long-term strategies. Know when to seek care.</p>
+            <a href="toolkits/cramps.html" class="btn btn--sm btn--outline mt-4" data-i18n="learn_more">Learn More</a>
+          </div>
+
+          <div class="features__card bg-gradient-follicular animate-on-scroll">
+            <div class="features__card-icon" style="background:rgba(86,184,112,0.15);">
+              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=56&h=56&fit=crop&auto=format" alt="" style="border-radius:var(--radius-lg);" width="56" height="56" loading="lazy">
+            </div>
+            <h3>PMS & PMDD Companion</h3>
+            <p class="text-sm text-muted">Clinical-grade guidance for premenstrual symptoms. Understand the difference between PMS and PMDD.</p>
+            <a href="toolkits/pms-pmdd.html" class="btn btn--sm btn--outline mt-4" data-i18n="learn_more">Learn More</a>
+          </div>
+
+          <div class="features__card bg-gradient-luteal animate-on-scroll">
+            <div class="features__card-icon" style="background:rgba(124,92,252,0.15);">
+              <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=56&h=56&fit=crop&auto=format" alt="" style="border-radius:var(--radius-lg);" width="56" height="56" loading="lazy">
+            </div>
+            <h3>Traditions Library</h3>
+            <p class="text-sm text-muted">Ayurveda, TCM, and Indigenous practices with cultural context, safety warnings, and contraindications.</p>
+            <a href="traditions.html" class="btn btn--sm btn--outline mt-4" data-i18n="learn_more">Learn More</a>
+          </div>
+
+          <div class="features__card bg-gradient-cool animate-on-scroll">
+            <div class="features__card-icon" style="background:rgba(52,152,219,0.15);">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=56&h=56&fit=crop&auto=format" alt="" style="border-radius:var(--radius-lg);" width="56" height="56" loading="lazy">
+            </div>
+            <h3>Doctor Visit Pack</h3>
+            <p class="text-sm text-muted">Export your cycle data summary and get a list of questions to ask at your next healthcare appointment.</p>
+            <a href="clinic-pack.html" class="btn btn--sm btn--outline mt-4" data-i18n="learn_more">Learn More</a>
+          </div>
+
+          <div class="features__card bg-gradient-warm animate-on-scroll">
+            <div class="features__card-icon" style="background:rgba(245,166,35,0.15);">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=56&h=56&fit=crop&auto=format" alt="" style="border-radius:var(--radius-lg);" width="56" height="56" loading="lazy">
+            </div>
+            <h3>Insights Dashboard</h3>
+            <p class="text-sm text-muted">Cycle overlays, trend lines, and non-diagnostic pattern detection. See what your data reveals.</p>
+            <a href="insights.html" class="btn btn--sm btn--outline mt-4" data-i18n="learn_more">Learn More</a>
+          </div>
+
+          <div class="features__card animate-on-scroll" style="background:rgba(46,204,113,0.05);">
+            <div class="features__card-icon" style="background:rgba(46,204,113,0.15);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Privacy Center</h3>
+            <p class="text-sm text-muted">Anonymous-first. Local-only mode. Export or delete anytime. No ad trackers. Your data is yours.</p>
+            <a href="privacy.html" class="btn btn--sm btn--outline mt-4" data-i18n="learn_more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVIDENCE & TRUST ===== -->
+    <section class="section bg-gray-50">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center;">
+          <div class="animate-on-scroll">
+            <h2>Evidence You Can Trust</h2>
+            <p class="text-muted mb-6">Every recommendation on PeriodGuide comes with a clear evidence grade so you always know the strength of what you're reading.</p>
+            <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+              <div class="flex items-center gap-3">
+                <span class="evidence-badge evidence-badge--strong" data-i18n="evidence_strong">Strong Evidence</span>
+                <span class="text-sm text-muted">Supported by systematic reviews or RCTs</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="evidence-badge evidence-badge--moderate" data-i18n="evidence_moderate">Moderate Evidence</span>
+                <span class="text-sm text-muted">Supported by observational studies or smaller trials</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="evidence-badge evidence-badge--emerging" data-i18n="evidence_emerging">Emerging Research</span>
+                <span class="text-sm text-muted">Promising early research, not yet conclusive</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="evidence-badge evidence-badge--traditional" data-i18n="evidence_traditional">Traditional Use</span>
+                <span class="text-sm text-muted">Historically used in cultural traditions, presented as viewpoints</span>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&h=600&fit=crop&auto=format"
+              alt="Healthcare professional reviewing medical information" class="lifestyle-img" loading="lazy" width="800" height="600">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIFE STAGES ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2>For Every Stage of Life</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">Your cycle changes as you do. PeriodGuide adapts guidance for wherever you are in your journey.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600&h=400&fit=crop&auto=format"
+              alt="Teenage friends laughing together" class="card__image" loading="lazy" width="600" height="400">
+            <div class="card__body">
+              <span class="card__tag" data-i18n="stage_teen">Teen</span>
+              <h3 class="card__title">Starting Your Journey</h3>
+              <p class="card__text">New to periods? We explain everything in clear, non-scary language. Irregular cycles are normal at first.</p>
+            </div>
+          </div>
+          <div class="card animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&auto=format"
+              alt="Woman exercising outdoors" class="card__image" loading="lazy" width="600" height="400">
+            <div class="card__body">
+              <span class="card__tag" data-i18n="stage_adult">Adult</span>
+              <h3 class="card__title">Optimize Your Rhythm</h3>
+              <p class="card__text">Sync your exercise, nutrition, and schedule with your cycle for better energy, performance, and wellbeing.</p>
+            </div>
+          </div>
+          <div class="card animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&h=400&fit=crop&auto=format"
+              alt="Woman in peaceful natural setting" class="card__image" loading="lazy" width="600" height="400">
+            <div class="card__body">
+              <span class="card__tag" data-i18n="stage_perimenopause">Perimenopause</span>
+              <h3 class="card__title">Navigating the Transition</h3>
+              <p class="card__text">Cycles changing? Symptoms shifting? Get evidence-based guidance for perimenopause and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="cta-section">
+          <h2>Your Cycle Deserves Better Than Guesswork</h2>
+          <p style="font-size:var(--text-lg);opacity:0.9;max-width:500px;margin:0 auto var(--space-8);">Start getting personalized, evidence-based guidance right now. No signup required.</p>
+          <div class="flex justify-center gap-4 flex-wrap">
+            <a href="#tracker" class="btn btn--lg" style="background:white;color:var(--color-primary);" data-i18n="hero_cta">Find My Cycle Day</a>
+            <a href="track.html" class="btn btn--lg" style="background:rgba(255,255,255,0.2);color:white;border:2px solid rgba(255,255,255,0.5);" data-i18n="tg_track_today">Track Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+          <div class="footer__privacy-badges">
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span data-i18n="privacy_no_trackers">No ad trackers</span>
+            </span>
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Anonymous-first
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_tools">Tools</h4>
+          <ul class="footer__links">
+            <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+            <li><a href="cycle-day.html" data-i18n="nav_cycle_day">Cycle Day Finder</a></li>
+            <li><a href="track.html" data-i18n="nav_track">Symptom Tracker</a></li>
+            <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+            <li><a href="clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_resources">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="toolkits/cramps.html" data-i18n="toolkit_cramps_title">Cramps Toolkit</a></li>
+            <li><a href="toolkits/pms-pmdd.html" data-i18n="toolkit_pms_title">PMS & PMDD</a></li>
+            <li><a href="traditions.html" data-i18n="nav_traditions">Traditions Library</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+            <li><a href="accessibility.html" data-i18n="nav_accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 <span data-i18n="footer_copyright">PeriodGuide.com. All rights reserved.</span></p>
+        <p class="text-sm" data-i18n="safety_red_flag_disclaimer">This is not medical advice. If you're concerned, contact a healthcare provider.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cycle-tracker.js"></script>
+  <script src="js/guidance.js"></script>
+  <script src="js/tracking.js"></script>
+  <script src="js/insights.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentDay = 1;
+      let currentMode = 'simple';
+      const cycleLength = 28;
+
+      // Load saved state
+      const saved = PG_CYCLE.loadState();
+      if (saved && saved.day) currentDay = saved.day;
+
+      function updateAll(day) {
+        currentDay = day;
+        const phase = PG_CYCLE.getPhase(day, cycleLength);
+        const lang = typeof PG_I18N !== 'undefined' ? PG_I18N.getLang() : 'en';
+
+        // Update wheels
+        PG_CYCLE.renderCycleWheel(document.getElementById('hero-cycle-wheel'), day, cycleLength);
+        PG_CYCLE.renderCycleWheel(document.getElementById('main-cycle-wheel'), day, cycleLength);
+
+        // Update guidance
+        PG_GUIDANCE.renderGuidancePanel(
+          document.getElementById('guidance-panel'),
+          phase, lang, currentMode
+        );
+
+        // Update phase cards
+        document.querySelectorAll('.phase-card').forEach(card => {
+          card.classList.toggle('active', card.dataset.phase === phase);
+        });
+
+        // Save state
+        PG_CYCLE.saveState({ day, phase, cycleLength });
+      }
+
+      // Day input handler
+      const dayInput = document.getElementById('cycle-day-input');
+      if (dayInput) {
+        dayInput.value = currentDay;
+        dayInput.addEventListener('input', (e) => {
+          const val = parseInt(e.target.value);
+          if (val >= 1 && val <= 45) updateAll(val);
+        });
+      }
+
+      // Date picker handler
+      const datePicker = document.getElementById('last-period-date');
+      if (datePicker) {
+        datePicker.addEventListener('change', (e) => {
+          if (e.target.value) {
+            const day = PG_CYCLE.calculateDayFromLastPeriod(e.target.value);
+            if (dayInput) dayInput.value = day;
+            updateAll(day);
+          }
+        });
+      }
+
+      // Mode toggle
+      document.querySelectorAll('.mode-toggle__btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.mode-toggle__btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentMode = btn.dataset.mode;
+          const phase = PG_CYCLE.getPhase(currentDay, cycleLength);
+          const lang = typeof PG_I18N !== 'undefined' ? PG_I18N.getLang() : 'en';
+          PG_GUIDANCE.renderGuidancePanel(
+            document.getElementById('guidance-panel'),
+            phase, lang, currentMode
+          );
+        });
+      });
+
+      // Phase card clicks
+      document.querySelectorAll('.phase-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const phase = card.dataset.phase;
+          const phaseStarts = { menstrual: 1, follicular: 6, ovulation: 14, luteal: 17 };
+          const day = phaseStarts[phase] || 1;
+          if (dayInput) dayInput.value = day;
+          updateAll(day);
+          document.getElementById('tracker').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Initial render
+      updateAll(currentDay);
+    });
+  </script>
+</body>
+</html>

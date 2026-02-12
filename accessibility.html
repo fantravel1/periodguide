@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="PeriodGuide Accessibility Statement — Our commitment to making menstrual health guidance accessible to everyone, regardless of ability.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/accessibility.html">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/accessibility.html">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/accessibility.html">
+  <link rel="canonical" href="https://periodguide.com/accessibility.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/themes.css">
+  <title>Accessibility — PeriodGuide</title>
+  <style>
+    .a11y-hero {
+      background: linear-gradient(135deg, rgba(124,92,252,0.08), rgba(52,152,219,0.08));
+      padding: var(--space-16) 0 var(--space-12); text-align: center;
+    }
+    .a11y-feature {
+      display: flex; gap: var(--space-4); padding: var(--space-5);
+      border-radius: var(--radius-xl); border: 1px solid var(--color-gray-200);
+      background: var(--color-white); transition: all var(--transition-base);
+    }
+    .a11y-feature:hover { box-shadow: var(--shadow-md); }
+    .a11y-feature__icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; background: var(--color-secondary-pale);
+      border-radius: var(--radius-lg);
+    }
+    .settings-panel {
+      background: var(--color-white); border: 2px solid var(--color-gray-200);
+      border-radius: var(--radius-2xl); padding: var(--space-8);
+    }
+    .setting-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: var(--space-4) 0; border-bottom: 1px solid var(--color-gray-100);
+    }
+    .setting-row:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><div class="nav__logo-icon" aria-hidden="true">P</div><span>PeriodGuide</span></a>
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="/" role="menuitem">Home</a></li>
+        <li role="none"><a href="today.html" role="menuitem">Today's Guide</a></li>
+        <li role="none"><a href="track.html" role="menuitem">Track</a></li>
+        <li role="none"><a href="insights.html" role="menuitem">Insights</a></li>
+        <li role="none"><a href="accessibility.html" role="menuitem" class="active">Accessibility</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en">EN</button>
+          <button class="lang-switcher__btn" data-lang="es">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li><li><a href="today.html">Today's Guide</a></li>
+      <li><a href="track.html">Track</a></li><li><a href="insights.html">Insights</a></li>
+      <li><a href="privacy.html">Privacy</a></li><li><a href="about.html">About</a></li>
+      <li><a href="accessibility.html" class="active">Accessibility</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+    <section class="a11y-hero">
+      <div class="container">
+        <h1 data-i18n="accessibility_title">Accessibility</h1>
+        <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;" data-i18n="accessibility_subtitle">PeriodGuide is designed to be accessible to everyone.</p>
+      </div>
+    </section>
+
+    <!-- Commitment -->
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <h2>Our Commitment</h2>
+        <p>PeriodGuide is committed to ensuring digital accessibility for people of all abilities. We continually improve the user experience for everyone and apply relevant accessibility standards.</p>
+        <p>We aim to conform to <strong>WCAG 2.1 Level AA</strong> guidelines. Menstrual health guidance should be available to everyone, regardless of how they access the web.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section bg-gray-50">
+      <div class="container" style="max-width:800px;">
+        <h2 class="text-center mb-8">Accessibility Features</h2>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#9000;&#65039;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Keyboard Navigation</h4>
+              <p class="text-sm text-muted" style="margin:0;">All interactive components are fully navigable with keyboard. Tab through the interface, use Enter to activate, Escape to close modals and menus.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#128483;&#65039;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Screen Reader Support</h4>
+              <p class="text-sm text-muted" style="margin:0;">Semantic HTML structure, ARIA labels where needed, meaningful alt text for all images, and properly labeled form controls throughout.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#127912;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Color Contrast</h4>
+              <p class="text-sm text-muted" style="margin:0;">All text meets WCAG AA contrast requirements. High contrast mode available for enhanced visibility. Information is never conveyed by color alone.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#9208;&#65039;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Reduced Motion</h4>
+              <p class="text-sm text-muted" style="margin:0;">Respects the <code>prefers-reduced-motion</code> system setting. All animations and transitions are disabled when reduced motion is preferred.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#128241;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Mobile-First Design</h4>
+              <p class="text-sm text-muted" style="margin:0;">Responsive across all device sizes. Touch targets are at least 44x44 pixels. Content reflows without horizontal scrolling up to 400% zoom.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#128202;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Chart Alternatives</h4>
+              <p class="text-sm text-muted" style="margin:0;">All data visualizations include text summaries and descriptive aria labels so the information is available to users who cannot see the charts.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#127760;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Multilingual Support</h4>
+              <p class="text-sm text-muted" style="margin:0;">Available in English, Spanish, and French. Proper <code>lang</code> attributes and hreflang tags for search engines and assistive technology.</p>
+            </div>
+          </div>
+          <div class="a11y-feature animate-on-scroll">
+            <div class="a11y-feature__icon">&#128196;</div>
+            <div>
+              <h4 style="margin-bottom:var(--space-1);">Plain Language</h4>
+              <p class="text-sm text-muted" style="margin:0;">Medical information is presented in clear, understandable language with a "Deep Science" option for those who want clinical detail. Non-shaming, inclusive language throughout.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section class="section">
+      <div class="container" style="max-width:600px;">
+        <h2 class="text-center mb-8">Accessibility Settings</h2>
+        <div class="settings-panel">
+          <div class="setting-row">
+            <div>
+              <h4 style="margin:0;">Dark Mode</h4>
+              <p class="text-sm text-muted" style="margin:0;">Reduce eye strain with a dark color scheme</p>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" class="toggle__input" id="dark-mode-toggle">
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div>
+              <h4 style="margin:0;">High Contrast</h4>
+              <p class="text-sm text-muted" style="margin:0;">Enhanced color contrast for better visibility</p>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" class="toggle__input" id="high-contrast-toggle">
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div>
+              <h4 style="margin:0;">Reduce Motion</h4>
+              <p class="text-sm text-muted" style="margin:0;">Disable animations and transitions</p>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" class="toggle__input" id="reduce-motion-toggle">
+              <span class="toggle__slider"></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div>
+              <h4 style="margin:0;">Text Size</h4>
+              <p class="text-sm text-muted" style="margin:0;">Adjust the base font size</p>
+            </div>
+            <div style="display:flex;gap:var(--space-2);">
+              <button class="btn btn--sm btn--ghost" id="text-decrease" aria-label="Decrease text size">A-</button>
+              <button class="btn btn--sm btn--ghost" id="text-reset" aria-label="Reset text size">A</button>
+              <button class="btn btn--sm btn--ghost" id="text-increase" aria-label="Increase text size">A+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section bg-gray-50">
+      <div class="container text-center" style="max-width:600px;">
+        <h2>Feedback</h2>
+        <p class="text-muted">We welcome feedback on the accessibility of PeriodGuide. If you encounter any barriers, or have suggestions for improvement, please let us know.</p>
+        <p class="text-muted">We take accessibility seriously and will respond to feedback promptly.</p>
+        <a href="about.html" class="btn btn--outline mt-4">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+        </div>
+        <div><h4 class="footer__heading">Tools</h4><ul class="footer__links"><li><a href="today.html">Today's Guide</a></li><li><a href="track.html">Track</a></li><li><a href="insights.html">Insights</a></li></ul></div>
+        <div><h4 class="footer__heading">Resources</h4><ul class="footer__links"><li><a href="toolkits/cramps.html">Cramps</a></li><li><a href="traditions.html">Traditions</a></li></ul></div>
+        <div><h4 class="footer__heading">Company</h4><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 PeriodGuide.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const darkToggle = document.getElementById('dark-mode-toggle');
+      const contrastToggle = document.getElementById('high-contrast-toggle');
+      const motionToggle = document.getElementById('reduce-motion-toggle');
+
+      if (darkToggle) {
+        darkToggle.checked = document.documentElement.getAttribute('data-theme') === 'dark';
+        darkToggle.addEventListener('change', () => {
+          const theme = darkToggle.checked ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('pg_theme', theme);
+        });
+      }
+
+      if (contrastToggle) {
+        contrastToggle.checked = document.documentElement.getAttribute('data-contrast') === 'high';
+        contrastToggle.addEventListener('change', () => {
+          const val = contrastToggle.checked ? 'high' : 'normal';
+          document.documentElement.setAttribute('data-contrast', val);
+          localStorage.setItem('pg_contrast', val);
+        });
+        const storedContrast = localStorage.getItem('pg_contrast');
+        if (storedContrast === 'high') { contrastToggle.checked = true; document.documentElement.setAttribute('data-contrast', 'high'); }
+      }
+
+      if (motionToggle) {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const storedMotion = localStorage.getItem('pg_reduce_motion');
+        motionToggle.checked = storedMotion === 'true' || prefersReduced;
+        motionToggle.addEventListener('change', () => {
+          localStorage.setItem('pg_reduce_motion', motionToggle.checked);
+          if (motionToggle.checked) {
+            document.documentElement.style.setProperty('--transition-fast', '0ms');
+            document.documentElement.style.setProperty('--transition-base', '0ms');
+            document.documentElement.style.setProperty('--transition-slow', '0ms');
+          } else {
+            document.documentElement.style.removeProperty('--transition-fast');
+            document.documentElement.style.removeProperty('--transition-base');
+            document.documentElement.style.removeProperty('--transition-slow');
+          }
+        });
+      }
+
+      let fontSize = parseFloat(localStorage.getItem('pg_font_size') || '16');
+      document.getElementById('text-decrease')?.addEventListener('click', () => {
+        fontSize = Math.max(12, fontSize - 1);
+        document.documentElement.style.fontSize = fontSize + 'px';
+        localStorage.setItem('pg_font_size', fontSize);
+      });
+      document.getElementById('text-reset')?.addEventListener('click', () => {
+        fontSize = 16;
+        document.documentElement.style.fontSize = '';
+        localStorage.setItem('pg_font_size', '16');
+      });
+      document.getElementById('text-increase')?.addEventListener('click', () => {
+        fontSize = Math.min(24, fontSize + 1);
+        document.documentElement.style.fontSize = fontSize + 'px';
+        localStorage.setItem('pg_font_size', fontSize);
+      });
+
+      const stored = localStorage.getItem('pg_font_size');
+      if (stored && stored !== '16') document.documentElement.style.fontSize = stored + 'px';
+    });
+  </script>
+</body>
+</html>

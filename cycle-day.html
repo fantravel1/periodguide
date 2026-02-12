@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Find your exact cycle day and understand your current phase. Interactive day grid, date picker, and phase-specific guidance from PeriodGuide.">
+  <meta name="keywords" content="cycle day finder, menstrual cycle day, what day of my cycle, period phase, menstrual phase calculator, cycle tracker">
+  <meta name="author" content="PeriodGuide">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cycle Day Finder — PeriodGuide">
+  <meta property="og:description" content="Find your exact cycle day and understand your current phase with evidence-based guidance.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://periodguide.com/cycle-day.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cycle Day Finder — PeriodGuide">
+  <meta name="twitter:description" content="Find your exact cycle day and understand your current phase.">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/cycle-day.html">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/cycle-day.html">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/cycle-day.html">
+  <link rel="alternate" hreflang="x-default" href="https://periodguide.com/cycle-day.html">
+
+  <link rel="canonical" href="https://periodguide.com/cycle-day.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/themes.css">
+
+  <title>Cycle Day Finder — PeriodGuide</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cycle Day Finder",
+    "description": "Interactive cycle day finder with phase-specific guidance. Select your cycle day or enter your last period date to discover what phase you're in.",
+    "url": "https://periodguide.com/cycle-day.html",
+    "isPartOf": {
+      "@type": "WebApplication",
+      "name": "PeriodGuide",
+      "url": "https://periodguide.com",
+      "applicationCategory": "HealthApplication"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://periodguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Cycle Day Finder", "item": "https://periodguide.com/cycle-day.html" }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* Cycle Day page-specific styles */
+    .cdf-hero {
+      position: relative;
+      overflow: hidden;
+      padding: var(--space-16) 0 var(--space-10);
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .cdf-hero { padding: var(--space-20) 0 var(--space-12); }
+    }
+    .cdf-hero__title {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: var(--weight-extrabold);
+      line-height: 1.1;
+      margin-bottom: var(--space-4);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @media (min-width: 768px) {
+      .cdf-hero__title { font-size: var(--text-5xl); }
+    }
+    @media (min-width: 1024px) {
+      .cdf-hero__title { font-size: var(--text-6xl); }
+    }
+    .cdf-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-gray-600);
+      max-width: 600px;
+      margin: 0 auto var(--space-8);
+      line-height: var(--leading-relaxed);
+    }
+    .cdf-hero__blobs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .cdf-hero__blobs .blob {
+      position: absolute;
+      border-radius: 50%;
+    }
+    .cdf-hero__blobs .blob:nth-child(1) {
+      width: 350px; height: 350px;
+      top: -80px; right: -80px;
+      background: var(--color-primary);
+      opacity: 0.07;
+    }
+    .cdf-hero__blobs .blob:nth-child(2) {
+      width: 250px; height: 250px;
+      bottom: -40px; left: -40px;
+      background: var(--color-follicular);
+      opacity: 0.06;
+    }
+    .cdf-hero__blobs .blob:nth-child(3) {
+      width: 180px; height: 180px;
+      top: 40%; left: 60%;
+      background: var(--color-secondary);
+      opacity: 0.05;
+    }
+
+    /* Finder controls */
+    .cdf-controls {
+      background: var(--color-gray-50);
+      position: relative;
+    }
+    .cdf-controls__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: start;
+    }
+    @media (min-width: 1024px) {
+      .cdf-controls__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+      }
+    }
+    .cdf-input-group {
+      background: var(--color-white);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-gray-200);
+    }
+    .cdf-input-group__title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      margin-bottom: var(--space-6);
+      color: var(--color-black);
+    }
+
+    /* Date picker card */
+    .cdf-date-card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .cdf-date-card__input-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .cdf-date-card__input-wrap label {
+      font-weight: var(--weight-semibold);
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+    }
+    .cdf-date-card__input-wrap input[type="date"] {
+      padding: var(--space-3) var(--space-4);
+      border: 2px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      font-family: var(--font-primary);
+      background: var(--color-white);
+      transition: border-color var(--transition-fast);
+      color: var(--color-black);
+    }
+    .cdf-date-card__input-wrap input[type="date"]:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px var(--color-primary-pale);
+    }
+
+    /* Cycle length selector */
+    .cdf-length-selector {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background: var(--color-primary-pale);
+      border-radius: var(--radius-lg);
+      flex-wrap: wrap;
+    }
+    .cdf-length-selector label {
+      font-weight: var(--weight-semibold);
+      font-size: var(--text-sm);
+      color: var(--color-gray-700);
+      white-space: nowrap;
+    }
+    .cdf-length-selector select {
+      padding: var(--space-2) var(--space-3);
+      border: 2px solid var(--color-gray-200);
+      border-radius: var(--radius-md);
+      font-size: var(--text-base);
+      font-weight: var(--weight-bold);
+      color: var(--color-primary);
+      background: var(--color-white);
+      cursor: pointer;
+      font-family: var(--font-primary);
+    }
+    .cdf-length-selector select:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+
+    /* Current phase display */
+    .cdf-current-phase {
+      text-align: center;
+      padding: var(--space-6);
+      border-radius: var(--radius-xl);
+      margin-top: var(--space-4);
+      transition: all var(--transition-base);
+    }
+    .cdf-current-phase__day {
+      font-family: var(--font-display);
+      font-size: var(--text-5xl);
+      font-weight: var(--weight-extrabold);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+    .cdf-current-phase__label {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-1);
+    }
+    .cdf-current-phase__name {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-bold);
+    }
+
+    /* Day Grid */
+    .cdf-daygrid-section {
+      position: relative;
+    }
+    .day-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: var(--space-2);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .day-grid { gap: var(--space-3); }
+    }
+    .day-grid__cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-bold);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      background: var(--color-white);
+      color: var(--color-gray-700);
+      position: relative;
+    }
+    @media (min-width: 640px) {
+      .day-grid__cell { font-size: var(--text-base); }
+    }
+    .day-grid__cell:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+    }
+    .day-grid__cell[data-phase="menstrual"] {
+      border-color: rgba(232, 93, 117, 0.3);
+      background: rgba(232, 93, 117, 0.05);
+    }
+    .day-grid__cell[data-phase="menstrual"]:hover,
+    .day-grid__cell[data-phase="menstrual"].selected {
+      background: var(--color-menstrual);
+      color: white;
+      border-color: var(--color-menstrual);
+    }
+    .day-grid__cell[data-phase="follicular"] {
+      border-color: rgba(86, 184, 112, 0.3);
+      background: rgba(86, 184, 112, 0.05);
+    }
+    .day-grid__cell[data-phase="follicular"]:hover,
+    .day-grid__cell[data-phase="follicular"].selected {
+      background: var(--color-follicular);
+      color: white;
+      border-color: var(--color-follicular);
+    }
+    .day-grid__cell[data-phase="ovulation"] {
+      border-color: rgba(245, 166, 35, 0.3);
+      background: rgba(245, 166, 35, 0.05);
+    }
+    .day-grid__cell[data-phase="ovulation"]:hover,
+    .day-grid__cell[data-phase="ovulation"].selected {
+      background: var(--color-ovulation);
+      color: white;
+      border-color: var(--color-ovulation);
+    }
+    .day-grid__cell[data-phase="luteal"] {
+      border-color: rgba(124, 92, 252, 0.3);
+      background: rgba(124, 92, 252, 0.05);
+    }
+    .day-grid__cell[data-phase="luteal"]:hover,
+    .day-grid__cell[data-phase="luteal"].selected {
+      background: var(--color-luteal);
+      color: white;
+      border-color: var(--color-luteal);
+    }
+
+    /* Day grid legend */
+    .day-grid-legend {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      margin-top: var(--space-6);
+    }
+    .day-grid-legend__item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-medium);
+      color: var(--color-gray-600);
+    }
+    .day-grid-legend__dot {
+      width: 12px;
+      height: 12px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Phase explanation cards */
+    .phase-explain-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .phase-explain-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .phase-explain-card {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      transition: all var(--transition-base);
+      border: 1px solid var(--color-gray-200);
+      background: var(--color-white);
+    }
+    .phase-explain-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .phase-explain-card__img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      .phase-explain-card__img { height: 220px; }
+    }
+    .phase-explain-card__body {
+      padding: var(--space-6);
+    }
+    .phase-explain-card__phase-bar {
+      height: 4px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+    }
+    .phase-explain-card__number {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: var(--weight-extrabold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-1);
+    }
+    .phase-explain-card__name {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      margin-bottom: var(--space-1);
+      color: var(--color-black);
+    }
+    .phase-explain-card__days {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      margin-bottom: var(--space-3);
+    }
+    .phase-explain-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-4);
+    }
+    .phase-explain-card__hormones {
+      font-size: var(--text-xs);
+      color: var(--color-gray-500);
+      padding: var(--space-3);
+      background: var(--color-gray-50);
+      border-radius: var(--radius-md);
+      line-height: var(--leading-relaxed);
+    }
+    .phase-explain-card__hormones strong {
+      color: var(--color-gray-700);
+    }
+
+    /* Guidance result */
+    .cdf-guidance-result {
+      background: var(--color-white);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-gray-200);
+    }
+
+    /* Lifestyle imagery */
+    .cdf-lifestyle-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: var(--radius-2xl);
+    }
+    @media (min-width: 768px) {
+      .cdf-lifestyle-img { height: 380px; }
+    }
+
+    /* CTA section */
+    .cdf-cta {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      text-align: center;
+      padding: var(--space-12) var(--space-6);
+      border-radius: var(--radius-2xl);
+      margin: var(--space-12) auto;
+      max-width: var(--container-xl);
+    }
+    @media (min-width: 768px) {
+      .cdf-cta { padding: var(--space-16) var(--space-8); }
+    }
+    .cdf-cta h2 {
+      color: white;
+      font-size: var(--text-3xl);
+      margin-bottom: var(--space-4);
+    }
+    @media (min-width: 768px) {
+      .cdf-cta h2 { font-size: var(--text-4xl); }
+    }
+
+    /* Wheel section */
+    .cdf-wheel-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-6);
+    }
+    .cdf-wheel {
+      width: 260px;
+      height: 260px;
+    }
+    @media (min-width: 640px) {
+      .cdf-wheel { width: 320px; height: 320px; }
+    }
+    @media (min-width: 768px) {
+      .cdf-wheel { width: 360px; height: 360px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="PeriodGuide Home">
+        <div class="nav__logo-icon" aria-hidden="true">P</div>
+        <span>PeriodGuide</span>
+      </a>
+
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="/" role="menuitem" data-i18n="nav_home">Home</a></li>
+        <li role="none"><a href="today.html" role="menuitem" data-i18n="nav_today">Today's Guide</a></li>
+        <li role="none"><a href="cycle-day.html" role="menuitem" class="active" data-i18n="nav_cycle_day">Cycle Day</a></li>
+        <li role="none"><a href="track.html" role="menuitem" data-i18n="nav_track">Track</a></li>
+        <li role="none"><a href="insights.html" role="menuitem" data-i18n="nav_insights">Insights</a></li>
+        <li role="none"><a href="toolkits/cramps.html" role="menuitem" data-i18n="nav_toolkits">Toolkits</a></li>
+        <li role="none"><a href="traditions.html" role="menuitem" data-i18n="nav_traditions">Traditions</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-switcher__btn" data-lang="es" aria-label="Espa&#241;ol">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr" aria-label="Fran&#231;ais">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="/" data-i18n="nav_home">Home</a></li>
+      <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+      <li><a href="cycle-day.html" class="active" data-i18n="nav_cycle_day">Cycle Day</a></li>
+      <li><a href="track.html" data-i18n="nav_track">Track</a></li>
+      <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+      <li><a href="toolkits/cramps.html" data-i18n="nav_toolkits">Toolkits</a></li>
+      <li><a href="traditions.html" data-i18n="nav_traditions">Traditions</a></li>
+      <li><a href="clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+      <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+    </ul>
+    <div class="lang-switcher" style="margin-top:var(--space-6);justify-content:center;">
+      <button class="lang-switcher__btn active" data-lang="en">EN</button>
+      <button class="lang-switcher__btn" data-lang="es">ES</button>
+      <button class="lang-switcher__btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="cdf-hero bg-gradient-hero" aria-labelledby="cdf-hero-title">
+      <div class="cdf-hero__blobs" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+      </div>
+      <div class="container">
+        <h1 id="cdf-hero-title" class="cdf-hero__title" data-i18n="cdf_title">Where Am I in My Cycle?</h1>
+        <p class="cdf-hero__subtitle" data-i18n="cdf_subtitle">Select your cycle day or let us help you figure it out. No app setup needed.</p>
+        <div class="flex justify-center gap-3 flex-wrap">
+          <a href="#day-grid-section" class="btn btn--primary btn--lg" data-i18n="cdf_select_day">Select your cycle day</a>
+          <a href="#date-section" class="btn btn--outline btn--lg" data-i18n="cdf_last_period">When did your last period start?</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--space-2);margin-top:var(--space-6);font-size:var(--text-sm);color:var(--color-gray-500);justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span data-i18n="hero_privacy_note">Privacy-first. No account required. Your data stays yours.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FINDER CONTROLS ===== -->
+    <section id="date-section" class="cdf-controls section" aria-label="Cycle day finder controls">
+      <div class="container">
+        <div class="cdf-controls__inner">
+
+          <!-- Left: Date Picker + Cycle Length -->
+          <div class="cdf-input-group animate-on-scroll">
+            <h2 class="cdf-input-group__title" data-i18n="cdf_last_period">When did your last period start?</h2>
+            <div class="cdf-date-card">
+              <div class="cdf-date-card__input-wrap">
+                <label for="cdf-last-period-date" data-i18n="cdf_last_period">When did your last period start?</label>
+                <input type="date" id="cdf-last-period-date" aria-label="Last period start date">
+              </div>
+              <p class="text-sm text-muted" data-i18n="cdf_help_text">Day 1 is the first day of your period bleeding. Count from there.</p>
+
+              <div class="cdf-length-selector">
+                <label for="cdf-cycle-length" data-i18n="cdf_typical_length">Typical cycle length</label>
+                <select id="cdf-cycle-length" aria-label="Cycle length in days">
+                  <option value="21">21 days</option>
+                  <option value="23">23 days</option>
+                  <option value="25">25 days</option>
+                  <option value="26">26 days</option>
+                  <option value="27">27 days</option>
+                  <option value="28" selected>28 days</option>
+                  <option value="29">29 days</option>
+                  <option value="30">30 days</option>
+                  <option value="31">31 days</option>
+                  <option value="32">32 days</option>
+                  <option value="33">33 days</option>
+                  <option value="35">35 days</option>
+                  <option value="38">38 days</option>
+                  <option value="40">40 days</option>
+                  <option value="45">45 days</option>
+                </select>
+              </div>
+
+              <p class="text-xs text-muted" data-i18n="cdf_not_sure">Not sure? That's okay.</p>
+            </div>
+
+            <!-- Current Phase Display -->
+            <div id="cdf-phase-display" class="cdf-current-phase bg-gradient-menstrual" aria-live="polite">
+              <div class="cdf-current-phase__label" data-i18n="cdf_day">Day</div>
+              <div class="cdf-current-phase__day" id="cdf-big-day">1</div>
+              <div class="cdf-current-phase__name" id="cdf-phase-name" data-i18n="phase_menstrual">Menstrual</div>
+            </div>
+          </div>
+
+          <!-- Right: Cycle Wheel + Guidance Preview -->
+          <div class="animate-on-scroll">
+            <div class="cdf-wheel-wrap">
+              <div id="cdf-cycle-wheel" class="cdf-wheel" role="img" aria-label="Interactive cycle wheel showing current cycle day"></div>
+            </div>
+            <div id="cdf-guidance-preview" class="cdf-guidance-result" style="margin-top:var(--space-6);">
+              <!-- Populated by JS -->
+            </div>
+            <div style="margin-top:var(--space-4);display:flex;gap:var(--space-3);flex-wrap:wrap;justify-content:center;">
+              <a href="today.html" class="btn btn--primary" data-i18n="tg_title">Today's Guide</a>
+              <a href="track.html" class="btn btn--outline" data-i18n="tg_track_today">Track Today</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTERACTIVE DAY GRID ===== -->
+    <section id="day-grid-section" class="cdf-daygrid-section section" aria-label="Cycle day grid">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h2 data-i18n="cdf_select_day">Select your cycle day</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;" data-i18n="cdf_help_text">Day 1 is the first day of your period bleeding. Count from there.</p>
+        </div>
+
+        <div id="cdf-day-grid" class="day-grid" role="grid" aria-label="Cycle days grid">
+          <!-- Populated by PG_CYCLE.renderDayGrid -->
+        </div>
+
+        <div class="day-grid-legend" aria-label="Phase color legend">
+          <div class="day-grid-legend__item">
+            <div class="day-grid-legend__dot" style="background:var(--color-menstrual);"></div>
+            <span data-i18n="phase_menstrual">Menstrual</span>
+          </div>
+          <div class="day-grid-legend__item">
+            <div class="day-grid-legend__dot" style="background:var(--color-follicular);"></div>
+            <span data-i18n="phase_follicular">Follicular</span>
+          </div>
+          <div class="day-grid-legend__item">
+            <div class="day-grid-legend__dot" style="background:var(--color-ovulation);"></div>
+            <span data-i18n="phase_ovulation">Ovulation</span>
+          </div>
+          <div class="day-grid-legend__item">
+            <div class="day-grid-legend__dot" style="background:var(--color-luteal);"></div>
+            <span data-i18n="phase_luteal">Luteal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIFESTYLE IMAGERY ===== -->
+    <section class="section bg-gray-50" aria-label="Understanding your cycle">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center;">
+          <div class="animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop&auto=format"
+              alt="Woman practicing yoga in a peaceful outdoor setting, representing cycle awareness and wellbeing"
+              class="cdf-lifestyle-img" loading="lazy" width="800" height="600">
+          </div>
+          <div class="animate-on-scroll">
+            <h2>Know Your Day, Know Yourself</h2>
+            <p class="text-muted mb-6">Your cycle day determines your hormonal landscape, which affects everything from energy and mood to sleep quality and pain tolerance. Knowing where you are empowers better decisions.</p>
+            <ul style="list-style:none;padding:0;">
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Understand energy fluctuations
+              </li>
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Plan workouts and rest days
+              </li>
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Anticipate mood and focus shifts
+              </li>
+              <li style="padding:var(--space-2) 0;display:flex;align-items:center;gap:var(--space-2);">
+                <span style="color:var(--color-success);font-weight:bold;">&#10003;</span> Optimize nutrition for each phase
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHASE EXPLANATION CARDS ===== -->
+    <section class="section" aria-label="Phase explanations">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2>Your Four Phases, Explained</h2>
+          <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;">Each phase of your cycle brings different hormonal patterns, symptoms, and opportunities. Tap any card to jump to that phase in the day grid.</p>
+        </div>
+
+        <div class="phase-explain-grid">
+          <!-- Menstrual -->
+          <article class="phase-explain-card animate-on-scroll" data-phase-card="menstrual" role="button" tabindex="0" aria-label="Menstrual phase: Days 1 to 5">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=440&fit=crop&auto=format"
+              alt="Person resting peacefully with a warm blanket, representing the menstrual phase"
+              class="phase-explain-card__img" loading="lazy" width="800" height="440">
+            <div class="phase-explain-card__body">
+              <div class="phase-explain-card__phase-bar" style="background:var(--color-menstrual);"></div>
+              <div class="phase-explain-card__number" style="color:var(--color-menstrual);">Phase 01</div>
+              <h3 class="phase-explain-card__name" data-i18n="phase_menstrual">Menstrual</h3>
+              <div class="phase-explain-card__days">Days 1-5 (typical)</div>
+              <p class="phase-explain-card__desc" data-i18n="phase_menstrual_desc">Your period is here. Focus on rest, warmth, and gentle nourishment.</p>
+              <div class="phase-explain-card__hormones">
+                <strong>Hormones:</strong> Estrogen and progesterone are at their lowest. Prostaglandins drive uterine contractions. Iron is being lost through menstrual flow.
+              </div>
+            </div>
+          </article>
+
+          <!-- Follicular -->
+          <article class="phase-explain-card animate-on-scroll" data-phase-card="follicular" role="button" tabindex="0" aria-label="Follicular phase: Days 6 to 13">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=440&fit=crop&auto=format"
+              alt="Person exercising outdoors in sunlight, representing the energy of the follicular phase"
+              class="phase-explain-card__img" loading="lazy" width="800" height="440">
+            <div class="phase-explain-card__body">
+              <div class="phase-explain-card__phase-bar" style="background:var(--color-follicular);"></div>
+              <div class="phase-explain-card__number" style="color:var(--color-follicular);">Phase 02</div>
+              <h3 class="phase-explain-card__name" data-i18n="phase_follicular">Follicular</h3>
+              <div class="phase-explain-card__days">Days 6-13 (typical)</div>
+              <p class="phase-explain-card__desc" data-i18n="phase_follicular_desc">Energy is rising. Great time for new projects and social activities.</p>
+              <div class="phase-explain-card__hormones">
+                <strong>Hormones:</strong> FSH stimulates follicle growth. Estrogen rises steadily, boosting serotonin and dopamine. Insulin sensitivity improves.
+              </div>
+            </div>
+          </article>
+
+          <!-- Ovulation -->
+          <article class="phase-explain-card animate-on-scroll" data-phase-card="ovulation" role="button" tabindex="0" aria-label="Ovulation phase: Days 14 to 16">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&h=440&fit=crop&auto=format"
+              alt="Group of friends socializing energetically, representing ovulation peak energy"
+              class="phase-explain-card__img" loading="lazy" width="800" height="440">
+            <div class="phase-explain-card__body">
+              <div class="phase-explain-card__phase-bar" style="background:var(--color-ovulation);"></div>
+              <div class="phase-explain-card__number" style="color:var(--color-ovulation);">Phase 03</div>
+              <h3 class="phase-explain-card__name" data-i18n="phase_ovulation">Ovulation</h3>
+              <div class="phase-explain-card__days">Days 14-16 (typical)</div>
+              <p class="phase-explain-card__desc" data-i18n="phase_ovulation_desc">Peak energy and confidence. Your body is at its most fertile.</p>
+              <div class="phase-explain-card__hormones">
+                <strong>Hormones:</strong> LH surges, triggering ovulation. Estrogen peaks. Testosterone briefly rises. Basal body temperature increases post-ovulation.
+              </div>
+            </div>
+          </article>
+
+          <!-- Luteal -->
+          <article class="phase-explain-card animate-on-scroll" data-phase-card="luteal" role="button" tabindex="0" aria-label="Luteal phase: Days 17 to 28">
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&h=440&fit=crop&auto=format"
+              alt="Nourishing foods and calming setting, representing the luteal phase self-care"
+              class="phase-explain-card__img" loading="lazy" width="800" height="440">
+            <div class="phase-explain-card__body">
+              <div class="phase-explain-card__phase-bar" style="background:var(--color-luteal);"></div>
+              <div class="phase-explain-card__number" style="color:var(--color-luteal);">Phase 04</div>
+              <h3 class="phase-explain-card__name" data-i18n="phase_luteal">Luteal</h3>
+              <div class="phase-explain-card__days">Days 17-28 (typical)</div>
+              <p class="phase-explain-card__desc" data-i18n="phase_luteal_desc">Winding down. Honor the need for slower pace and self-care.</p>
+              <div class="phase-explain-card__hormones">
+                <strong>Hormones:</strong> Progesterone dominates. Metabolic rate increases. GABA activity rises (calming effect). PMS symptoms may appear as progesterone drops late in phase.
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECOND LIFESTYLE IMAGE ===== -->
+    <section class="section bg-gray-50" aria-label="Cycle tracking benefits">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center;">
+          <div class="animate-on-scroll" style="order:2;">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=600&fit=crop&auto=format"
+              alt="Person journaling in a cozy setting, representing mindful cycle tracking"
+              class="cdf-lifestyle-img" loading="lazy" width="800" height="600">
+          </div>
+          <div class="animate-on-scroll" style="order:1;">
+            <h2>Track It. Refine It. Own It.</h2>
+            <p class="text-muted mb-6">Once you find your cycle day, start tracking daily. Even basic data like pain, mood, and energy can reveal powerful patterns over 2-3 cycles.</p>
+            <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+              <a href="track.html" class="btn btn--primary" data-i18n="tg_track_today">Track Today</a>
+              <a href="insights.html" class="btn btn--outline" data-i18n="nav_insights">Insights</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" style="padding-bottom:0;" aria-label="Call to action">
+      <div class="container">
+        <div class="cdf-cta">
+          <h2>Ready to Understand Your Cycle?</h2>
+          <p style="font-size:var(--text-lg);opacity:0.9;max-width:500px;margin:0 auto var(--space-8);">Get daily, phase-specific guidance based on where you are right now. Free, private, and evidence-based.</p>
+          <div class="flex justify-center gap-4 flex-wrap">
+            <a href="today.html" class="btn btn--lg" style="background:white;color:var(--color-primary);" data-i18n="hero_cta_secondary">Explore Today's Guide</a>
+            <a href="track.html" class="btn btn--lg" style="background:rgba(255,255,255,0.2);color:white;border:2px solid rgba(255,255,255,0.5);" data-i18n="tg_track_today">Track Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+          <div class="footer__privacy-badges">
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span data-i18n="privacy_no_trackers">No ad trackers</span>
+            </span>
+            <span class="privacy-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Anonymous-first
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_tools">Tools</h4>
+          <ul class="footer__links">
+            <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+            <li><a href="cycle-day.html" data-i18n="nav_cycle_day">Cycle Day Finder</a></li>
+            <li><a href="track.html" data-i18n="nav_track">Symptom Tracker</a></li>
+            <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+            <li><a href="clinic-pack.html" data-i18n="nav_clinic_pack">Clinic Pack</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_resources">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="toolkits/cramps.html" data-i18n="toolkit_cramps_title">Cramps Toolkit</a></li>
+            <li><a href="toolkits/pms-pmdd.html" data-i18n="toolkit_pms_title">PMS & PMDD</a></li>
+            <li><a href="traditions.html" data-i18n="nav_traditions">Traditions Library</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+            <li><a href="accessibility.html" data-i18n="nav_accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 <span data-i18n="footer_copyright">PeriodGuide.com. All rights reserved.</span></p>
+        <p class="text-sm" data-i18n="safety_red_flag_disclaimer">This is not medical advice. If you're concerned, contact a healthcare provider.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cycle-tracker.js"></script>
+  <script src="js/guidance.js"></script>
+  <script src="js/tracking.js"></script>
+  <script src="js/insights.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentDay = 1;
+      let cycleLength = 28;
+
+      // Load saved state
+      const saved = PG_CYCLE.loadState();
+      if (saved) {
+        if (saved.day) currentDay = saved.day;
+        if (saved.cycleLength) cycleLength = saved.cycleLength;
+      }
+
+      const dayGrid = document.getElementById('cdf-day-grid');
+      const datePicker = document.getElementById('cdf-last-period-date');
+      const cycleLengthSelect = document.getElementById('cdf-cycle-length');
+      const bigDay = document.getElementById('cdf-big-day');
+      const phaseName = document.getElementById('cdf-phase-name');
+      const phaseDisplay = document.getElementById('cdf-phase-display');
+      const wheel = document.getElementById('cdf-cycle-wheel');
+      const guidancePreview = document.getElementById('cdf-guidance-preview');
+
+      // Set initial cycle length select value
+      if (cycleLengthSelect) {
+        cycleLengthSelect.value = cycleLength;
+      }
+
+      const phaseGradients = {
+        menstrual: 'bg-gradient-menstrual',
+        follicular: 'bg-gradient-follicular',
+        ovulation: 'bg-gradient-ovulation',
+        luteal: 'bg-gradient-luteal'
+      };
+
+      const phaseColors = {
+        menstrual: 'var(--color-menstrual)',
+        follicular: 'var(--color-follicular)',
+        ovulation: 'var(--color-ovulation)',
+        luteal: 'var(--color-luteal)'
+      };
+
+      function updateAll(day) {
+        currentDay = day;
+        const phase = PG_CYCLE.getPhase(day, cycleLength);
+        const lang = typeof PG_I18N !== 'undefined' ? PG_I18N.getLang() : 'en';
+
+        // Update big day display
+        if (bigDay) {
+          bigDay.textContent = day;
+          bigDay.style.color = phaseColors[phase];
+        }
+
+        // Update phase name
+        if (phaseName) {
+          const t = typeof PG_I18N !== 'undefined' ? PG_I18N.t : (k) => k;
+          const phaseInfo = PG_CYCLE.getPhaseInfo(phase);
+          phaseName.textContent = t(phaseInfo.label);
+          phaseName.style.color = phaseColors[phase];
+        }
+
+        // Update phase display background
+        if (phaseDisplay) {
+          Object.values(phaseGradients).forEach(g => phaseDisplay.classList.remove(g));
+          phaseDisplay.classList.add(phaseGradients[phase]);
+        }
+
+        // Update cycle wheel
+        PG_CYCLE.renderCycleWheel(wheel, day, cycleLength);
+
+        // Update day grid
+        PG_CYCLE.renderDayGrid(dayGrid, day, cycleLength, (selectedDay) => {
+          updateAll(selectedDay);
+        });
+
+        // Update guidance preview
+        PG_GUIDANCE.renderGuidancePanel(guidancePreview, phase, lang, 'simple');
+
+        // Highlight active phase card
+        document.querySelectorAll('[data-phase-card]').forEach(card => {
+          const isActive = card.dataset.phaseCard === phase;
+          card.style.borderColor = isActive ? phaseColors[phase] : '';
+          card.style.boxShadow = isActive ? 'var(--shadow-lg)' : '';
+        });
+
+        // Save state
+        PG_CYCLE.saveState({ day, phase, cycleLength });
+      }
+
+      // Date picker handler
+      if (datePicker) {
+        datePicker.addEventListener('change', (e) => {
+          if (e.target.value) {
+            const day = PG_CYCLE.calculateDayFromLastPeriod(e.target.value);
+            const clampedDay = Math.min(day, cycleLength);
+            updateAll(clampedDay);
+          }
+        });
+      }
+
+      // Cycle length handler
+      if (cycleLengthSelect) {
+        cycleLengthSelect.addEventListener('change', (e) => {
+          cycleLength = parseInt(e.target.value);
+          if (currentDay > cycleLength) currentDay = cycleLength;
+          updateAll(currentDay);
+        });
+      }
+
+      // Phase explanation card click handlers
+      document.querySelectorAll('[data-phase-card]').forEach(card => {
+        function handleClick() {
+          const phase = card.dataset.phaseCard;
+          const phaseStarts = { menstrual: 1, follicular: 6, ovulation: 14, luteal: 17 };
+          const day = phaseStarts[phase] || 1;
+          updateAll(day);
+          document.getElementById('day-grid-section').scrollIntoView({ behavior: 'smooth' });
+        }
+        card.addEventListener('click', handleClick);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleClick();
+          }
+        });
+      });
+
+      // Initial render
+      updateAll(currentDay);
+    });
+  </script>
+</body>
+</html>

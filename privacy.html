@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="PeriodGuide Privacy Center — Your intimate health data belongs to you. Anonymous-first, local-only mode, export or delete anytime. No ad trackers.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+  <meta property="og:title" content="Privacy Center — PeriodGuide">
+  <meta property="og:description" content="Your intimate health data belongs to you. Period.">
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/privacy.html">
+  <link rel="canonical" href="https://periodguide.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/themes.css">
+  <title>Privacy Center — PeriodGuide</title>
+  <style>
+    .privacy-hero {
+      background: linear-gradient(135deg, rgba(46,204,113,0.08), rgba(52,152,219,0.08));
+      padding: var(--space-16) 0 var(--space-12);
+      text-align: center;
+    }
+    .privacy-hero__icon {
+      width: 80px; height: 80px; margin: 0 auto var(--space-6);
+      background: rgba(46,204,113,0.15); border-radius: var(--radius-full);
+      display: flex; align-items: center; justify-content: center; font-size: 2rem;
+    }
+    .privacy-mode {
+      padding: var(--space-8); border-radius: var(--radius-2xl);
+      border: 2px solid var(--color-gray-200); transition: all var(--transition-base);
+    }
+    .privacy-mode:hover { border-color: var(--color-success); box-shadow: var(--shadow-md); }
+    .privacy-mode__header { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4); }
+    .privacy-mode__icon {
+      width: 56px; height: 56px; border-radius: var(--radius-xl);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;
+    }
+    .privacy-mode__badge {
+      display: inline-block; padding: var(--space-1) var(--space-3);
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      border-radius: var(--radius-full); margin-bottom: var(--space-2);
+    }
+    .promise-card {
+      text-align: center; padding: var(--space-8); background: var(--color-gray-900);
+      color: var(--color-white); border-radius: var(--radius-2xl); margin: var(--space-12) 0;
+    }
+    .promise-card h2 { color: var(--color-white); }
+    .data-action { display: flex; align-items: center; justify-content: space-between;
+      padding: var(--space-5); border: 2px solid var(--color-gray-200);
+      border-radius: var(--radius-xl); transition: all var(--transition-base); }
+    .data-action:hover { border-color: var(--color-gray-400); }
+    .data-action__info { display: flex; align-items: center; gap: var(--space-3); }
+    .data-action__icon { width: 44px; height: 44px; border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="PeriodGuide Home">
+        <div class="nav__logo-icon" aria-hidden="true">P</div><span>PeriodGuide</span>
+      </a>
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="/" role="menuitem" data-i18n="nav_home">Home</a></li>
+        <li role="none"><a href="today.html" role="menuitem" data-i18n="nav_today">Today's Guide</a></li>
+        <li role="none"><a href="cycle-day.html" role="menuitem" data-i18n="nav_cycle_day">Cycle Day</a></li>
+        <li role="none"><a href="track.html" role="menuitem" data-i18n="nav_track">Track</a></li>
+        <li role="none"><a href="insights.html" role="menuitem" data-i18n="nav_insights">Insights</a></li>
+        <li role="none"><a href="toolkits/cramps.html" role="menuitem" data-i18n="nav_toolkits">Toolkits</a></li>
+        <li role="none"><a href="privacy.html" role="menuitem" class="active" data-i18n="nav_privacy">Privacy</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en">EN</button>
+          <button class="lang-switcher__btn" data-lang="es">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="/" data-i18n="nav_home">Home</a></li>
+      <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+      <li><a href="track.html" data-i18n="nav_track">Track</a></li>
+      <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+      <li><a href="toolkits/cramps.html" data-i18n="nav_toolkits">Toolkits</a></li>
+      <li><a href="privacy.html" class="active" data-i18n="nav_privacy">Privacy</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="privacy-hero">
+      <div class="container">
+        <div class="privacy-hero__icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h1 data-i18n="privacy_title">Privacy Center</h1>
+        <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;" data-i18n="privacy_subtitle">Your intimate health data belongs to you. Period.</p>
+      </div>
+    </section>
+
+    <!-- Our Promise -->
+    <section class="section">
+      <div class="container">
+        <div class="promise-card animate-on-scroll">
+          <h2 data-i18n="privacy_promise">We do not sell intimate data. Period.</h2>
+          <p style="font-size:var(--text-lg);opacity:0.8;max-width:600px;margin:var(--space-4) auto 0;">PeriodGuide is built on trust. Your menstrual health data is never sold, shared with advertisers, or used for targeted ads. We believe privacy isn't a feature — it's architecture.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Modes -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <h2 class="text-center mb-8">Choose Your Privacy Level</h2>
+        <div class="grid grid-3">
+          <div class="privacy-mode animate-on-scroll">
+            <div class="privacy-mode__header">
+              <div class="privacy-mode__icon" style="background:rgba(46,204,113,0.15);">&#128274;</div>
+              <div>
+                <span class="privacy-mode__badge" style="background:rgba(46,204,113,0.15);color:#2ECC71;">Default</span>
+                <h3 style="margin:0;" data-i18n="privacy_anonymous">Anonymous Mode</h3>
+              </div>
+            </div>
+            <p class="text-sm text-muted">Your data is stored with a random anonymous key generated on your device. No email, no name, no personally identifying information ever leaves your browser. The server stores only hashed identifiers.</p>
+            <ul style="list-style:none;padding:0;margin-top:var(--space-4);">
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Random anonymous key</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Syncs across sessions</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Export & delete anytime</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; No account required</li>
+            </ul>
+          </div>
+
+          <div class="privacy-mode animate-on-scroll">
+            <div class="privacy-mode__header">
+              <div class="privacy-mode__icon" style="background:rgba(52,152,219,0.15);">&#128737;&#65039;</div>
+              <div>
+                <span class="privacy-mode__badge" style="background:rgba(52,152,219,0.15);color:#3498DB;">Maximum</span>
+                <h3 style="margin:0;" data-i18n="privacy_local_only">Local-Only Mode</h3>
+              </div>
+            </div>
+            <p class="text-sm text-muted">Zero network calls. Everything stays in your browser's local storage. No data ever leaves your device. Perfect for maximum privacy. You can still export your data as a file.</p>
+            <ul style="list-style:none;padding:0;margin-top:var(--space-4);">
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Zero server communication</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Browser-only storage</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Local file export</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Full guidance still works</li>
+            </ul>
+            <label class="toggle mt-4">
+              <input type="checkbox" class="toggle__input" id="local-only-toggle">
+              <span class="toggle__slider"></span>
+              <span class="toggle__label">Enable Local-Only</span>
+            </label>
+          </div>
+
+          <div class="privacy-mode animate-on-scroll">
+            <div class="privacy-mode__header">
+              <div class="privacy-mode__icon" style="background:rgba(245,166,35,0.15);">&#128100;</div>
+              <div>
+                <span class="privacy-mode__badge" style="background:rgba(245,166,35,0.15);color:#F5A623;">Optional</span>
+                <h3 style="margin:0;">Account Mode</h3>
+              </div>
+            </div>
+            <p class="text-sm text-muted">For cross-device convenience only. Even with an account, we collect minimal data, never share it, and you can delete everything at any time. Accounts are never required.</p>
+            <ul style="list-style:none;padding:0;margin-top:var(--space-4);">
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Cross-device sync</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Same privacy guarantees</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Export & delete anytime</li>
+              <li class="text-sm" style="padding:var(--space-1) 0;">&#10003; Never required</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Actions -->
+    <section class="section bg-gray-50">
+      <div class="container" style="max-width:700px;">
+        <h2 class="text-center mb-8">Your Data, Your Control</h2>
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+          <div class="data-action animate-on-scroll">
+            <div class="data-action__info">
+              <div class="data-action__icon" style="background:rgba(52,152,219,0.15);">&#128230;</div>
+              <div>
+                <h4 style="margin:0;" data-i18n="privacy_export">Export My Data</h4>
+                <p class="text-sm text-muted" style="margin:0;">Download all your data as JSON or CSV</p>
+              </div>
+            </div>
+            <button class="btn btn--outline btn--sm" id="export-json-btn">JSON</button>
+          </div>
+
+          <div class="data-action animate-on-scroll">
+            <div class="data-action__info">
+              <div class="data-action__icon" style="background:rgba(52,152,219,0.15);">&#128196;</div>
+              <div>
+                <h4 style="margin:0;">Export as CSV</h4>
+                <p class="text-sm text-muted" style="margin:0;">Spreadsheet-compatible format</p>
+              </div>
+            </div>
+            <button class="btn btn--outline btn--sm" id="export-csv-btn">CSV</button>
+          </div>
+
+          <div class="data-action animate-on-scroll" style="border-color:rgba(231,76,60,0.3);">
+            <div class="data-action__info">
+              <div class="data-action__icon" style="background:rgba(231,76,60,0.15);">&#128465;&#65039;</div>
+              <div>
+                <h4 style="margin:0;color:var(--color-danger);" data-i18n="privacy_delete">Delete All Data</h4>
+                <p class="text-sm text-muted" style="margin:0;">Permanently remove all tracked data</p>
+              </div>
+            </div>
+            <button class="btn btn--sm" style="background:var(--color-danger);color:white;border:none;" id="delete-all-btn">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Don't Do -->
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <h2 class="text-center mb-8">What We Never Do</h2>
+        <div class="grid grid-2">
+          <div class="alert alert--success">
+            <div class="alert__content">
+              <div class="alert__title">&#10003; What We Do</div>
+              <ul style="padding-left:var(--space-4);margin-top:var(--space-2);">
+                <li>Store data anonymously</li>
+                <li>Let you export everything</li>
+                <li>Let you delete everything</li>
+                <li>Offer local-only mode</li>
+                <li>Use secure, encrypted connections</li>
+                <li>Be transparent about our practices</li>
+              </ul>
+            </div>
+          </div>
+          <div class="alert alert--danger">
+            <div class="alert__content">
+              <div class="alert__title">&#10007; What We Never Do</div>
+              <ul style="padding-left:var(--space-4);margin-top:var(--space-2);">
+                <li>Sell your data to anyone</li>
+                <li>Show targeted ads based on health data</li>
+                <li>Share data with insurance companies</li>
+                <li>Use ad trackers on health pages</li>
+                <li>Require personal information</li>
+                <li>Make deletion difficult</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image -->
+    <section class="section bg-gray-50" style="padding:var(--space-8) 0;">
+      <div class="container">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop&auto=format"
+          alt="Secure digital privacy concept" style="width:100%;height:300px;object-fit:cover;border-radius:var(--radius-2xl);" loading="lazy" width="1200" height="400">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_tools">Tools</h4>
+          <ul class="footer__links">
+            <li><a href="today.html" data-i18n="nav_today">Today's Guide</a></li>
+            <li><a href="track.html" data-i18n="nav_track">Track</a></li>
+            <li><a href="insights.html" data-i18n="nav_insights">Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_resources">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="toolkits/cramps.html">Cramps Toolkit</a></li>
+            <li><a href="toolkits/pms-pmdd.html">PMS & PMDD</a></li>
+            <li><a href="traditions.html">Traditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="privacy.html" data-i18n="nav_privacy">Privacy</a></li>
+            <li><a href="accessibility.html" data-i18n="nav_accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 PeriodGuide.com</p>
+        <p class="text-sm" data-i18n="safety_red_flag_disclaimer">This is not medical advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/tracking.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function downloadFile(content, filename, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = filename;
+        document.body.appendChild(a); a.click();
+        document.body.removeChild(a); URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('export-json-btn')?.addEventListener('click', () => {
+        const data = PG_TRACKING.exportEntries('json');
+        downloadFile(data, 'periodguide-data.json', 'application/json');
+        PG_APP.showToast('Data exported as JSON', 'success');
+      });
+
+      document.getElementById('export-csv-btn')?.addEventListener('click', () => {
+        const data = PG_TRACKING.exportEntries('csv');
+        downloadFile(data, 'periodguide-data.csv', 'text/csv');
+        PG_APP.showToast('Data exported as CSV', 'success');
+      });
+
+      document.getElementById('delete-all-btn')?.addEventListener('click', () => {
+        if (confirm('Are you sure you want to delete ALL your tracked data? This cannot be undone.')) {
+          PG_TRACKING.deleteAllEntries();
+          localStorage.removeItem('pg_cycle_state');
+          PG_APP.showToast('All data deleted', 'success');
+        }
+      });
+
+      document.getElementById('local-only-toggle')?.addEventListener('change', (e) => {
+        localStorage.setItem('pg_local_only', e.target.checked);
+        PG_APP.showToast(e.target.checked ? 'Local-only mode enabled' : 'Local-only mode disabled', 'info');
+      });
+
+      const localToggle = document.getElementById('local-only-toggle');
+      if (localToggle) localToggle.checked = localStorage.getItem('pg_local_only') === 'true';
+    });
+  </script>
+</body>
+</html>

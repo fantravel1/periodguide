@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Doctor Visit Pack — Prepare for your healthcare appointment with an exportable cycle summary, symptom history, and questions to ask your provider.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E85D75">
+  <meta property="og:title" content="Doctor Visit Pack — PeriodGuide">
+  <meta property="og:description" content="Prepare for your healthcare appointment with an exportable cycle data summary.">
+  <link rel="alternate" hreflang="en" href="https://periodguide.com/clinic-pack.html">
+  <link rel="alternate" hreflang="es" href="https://periodguide.com/es/clinic-pack.html">
+  <link rel="alternate" hreflang="fr" href="https://periodguide.com/fr/clinic-pack.html">
+  <link rel="canonical" href="https://periodguide.com/clinic-pack.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/themes.css">
+  <title>Doctor Visit Pack — PeriodGuide</title>
+  <style>
+    .clinic-hero {
+      background: linear-gradient(135deg, rgba(52,152,219,0.08), rgba(124,92,252,0.08));
+      padding: var(--space-16) 0 var(--space-12); text-align: center;
+    }
+    .clinic-hero__icon {
+      width: 80px; height: 80px; margin: 0 auto var(--space-6);
+      background: rgba(52,152,219,0.15); border-radius: var(--radius-full);
+      display: flex; align-items: center; justify-content: center; font-size: 2rem;
+    }
+    .question-card {
+      padding: var(--space-5); border-radius: var(--radius-xl);
+      border: 2px solid var(--color-gray-200); transition: all var(--transition-base);
+      display: flex; gap: var(--space-3); align-items: flex-start;
+    }
+    .question-card:hover { border-color: var(--color-info); background: rgba(52,152,219,0.03); }
+    .question-card__check {
+      width: 24px; height: 24px; border: 2px solid var(--color-gray-300);
+      border-radius: var(--radius-sm); flex-shrink: 0; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: all var(--transition-fast);
+    }
+    .question-card__check.checked { background: var(--color-info); border-color: var(--color-info); color: white; }
+    .summary-section {
+      background: var(--color-white); border: 2px solid var(--color-gray-200);
+      border-radius: var(--radius-2xl); padding: var(--space-8); margin-bottom: var(--space-6);
+    }
+    .summary-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: var(--space-3) 0; border-bottom: 1px solid var(--color-gray-100);
+    }
+    .summary-row:last-child { border-bottom: none; }
+    .print-section { border: 2px dashed var(--color-gray-300); border-radius: var(--radius-xl);
+      padding: var(--space-6); background: var(--color-gray-50); }
+    @media print {
+      .nav, .footer, .no-print, .mobile-menu { display: none !important; }
+      .print-section { border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><div class="nav__logo-icon" aria-hidden="true">P</div><span>PeriodGuide</span></a>
+      <ul class="nav__links" role="menubar">
+        <li role="none"><a href="/" role="menuitem">Home</a></li>
+        <li role="none"><a href="today.html" role="menuitem">Today's Guide</a></li>
+        <li role="none"><a href="track.html" role="menuitem">Track</a></li>
+        <li role="none"><a href="insights.html" role="menuitem">Insights</a></li>
+        <li role="none"><a href="toolkits/cramps.html" role="menuitem">Toolkits</a></li>
+        <li role="none"><a href="clinic-pack.html" role="menuitem" class="active">Clinic Pack</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-switcher__btn active" data-lang="en">EN</button>
+          <button class="lang-switcher__btn" data-lang="es">ES</button>
+          <button class="lang-switcher__btn" data-lang="fr">FR</button>
+        </div>
+        <button class="theme-toggle" aria-label="Switch to dark mode">&#9790;</button>
+        <button class="nav__mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li><li><a href="today.html">Today's Guide</a></li>
+      <li><a href="track.html">Track</a></li><li><a href="insights.html">Insights</a></li>
+      <li><a href="clinic-pack.html" class="active">Clinic Pack</a></li>
+      <li><a href="privacy.html">Privacy</a></li><li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+    <section class="clinic-hero">
+      <div class="container">
+        <div class="clinic-hero__icon" aria-hidden="true">&#128203;</div>
+        <h1 data-i18n="clinic_title">Doctor Visit Pack</h1>
+        <p class="text-lg text-muted" style="max-width:600px;margin:0 auto;" data-i18n="clinic_subtitle">Prepare for your healthcare appointment with an exportable summary of your cycle data and questions to ask.</p>
+      </div>
+    </section>
+
+    <!-- Your Summary -->
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <h2 class="mb-6">Your Cycle Summary</h2>
+        <div class="summary-section print-section" id="cycle-summary">
+          <div style="text-align:center;margin-bottom:var(--space-6);">
+            <h3 style="color:var(--color-primary);">PeriodGuide — Cycle Summary</h3>
+            <p class="text-sm text-muted" id="summary-date-range">Generated on <span id="gen-date"></span></p>
+          </div>
+          <div id="summary-stats">
+            <p class="text-muted text-center p-6">Track for a few days to generate your summary. <a href="track.html">Start tracking</a></p>
+          </div>
+        </div>
+
+        <div class="flex gap-3 flex-wrap no-print" style="margin-bottom:var(--space-8);">
+          <button class="btn btn--primary" id="print-summary" data-i18n="clinic_export">
+            Export My Summary
+          </button>
+          <button class="btn btn--outline" id="export-summary-json">Export Data (JSON)</button>
+        </div>
+
+        <!-- Hero image -->
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1000&h=400&fit=crop&auto=format"
+          alt="Healthcare professional in consultation" style="width:100%;height:280px;object-fit:cover;border-radius:var(--radius-2xl);margin-bottom:var(--space-8);" loading="lazy" width="1000" height="400">
+      </div>
+    </section>
+
+    <!-- Questions to Ask -->
+    <section class="section bg-gray-50">
+      <div class="container" style="max-width:800px;">
+        <h2 class="mb-4" data-i18n="clinic_questions">Questions to Ask</h2>
+        <p class="text-muted mb-6">Check the questions you want to remember for your appointment. You can print this page to bring with you.</p>
+
+        <h3 class="mb-4">About Your Cycle</h3>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-8);">
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Is my cycle length normal for my age?</p>
+              <p class="text-sm text-muted" style="margin:0;">Share your average cycle length from your tracking data.</p>
+            </div>
+          </div>
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Should I be concerned about my bleeding pattern?</p>
+              <p class="text-sm text-muted" style="margin:0;">Mention duration, heaviness, and any changes you've noticed.</p>
+            </div>
+          </div>
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">What could be causing my irregular cycles?</p>
+              <p class="text-sm text-muted" style="margin:0;">Relevant if your cycles vary significantly in length.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mb-4">About Pain</h3>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-8);">
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Is my pain level normal, or should we investigate further?</p>
+              <p class="text-sm text-muted" style="margin:0;">Share your average and maximum pain scores from tracking.</p>
+            </div>
+          </div>
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Could my symptoms indicate endometriosis or another condition?</p>
+              <p class="text-sm text-muted" style="margin:0;">Especially if pain is severe, extends beyond your period, or affects daily activities.</p>
+            </div>
+          </div>
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">What pain management options should I consider?</p>
+              <p class="text-sm text-muted" style="margin:0;">Ask about both medication and non-medication approaches.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mb-4">About PMS/Mood</h3>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-8);">
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Could my mood symptoms indicate PMDD rather than PMS?</p>
+              <p class="text-sm text-muted" style="margin:0;">PMDD is a clinical condition that responds well to treatment. Share your mood tracking data.</p>
+            </div>
+          </div>
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Are there specific supplements that could help with my symptoms?</p>
+              <p class="text-sm text-muted" style="margin:0;">Ask about evidence-based options like magnesium, calcium, vitamin B6.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mb-4">General</h3>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">Should I have any blood work done?</p>
+              <p class="text-sm text-muted" style="margin:0;">Iron levels, thyroid function, and hormone panels may be relevant.</p>
+            </div>
+          </div>
+          <div class="question-card">
+            <div class="question-card__check" onclick="this.classList.toggle('checked');this.textContent=this.classList.contains('checked')?'\u2713':'';" role="checkbox" tabindex="0" aria-label="Check question"></div>
+            <div>
+              <p class="font-semibold" style="margin:0;">When should I follow up or come back?</p>
+              <p class="text-sm text-muted" style="margin:0;">Get a clear timeline for reassessment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <h2 class="text-center mb-8">Tips for Your Visit</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card__body">
+              <h4>&#128221; Before Your Visit</h4>
+              <ul class="text-sm text-muted" style="margin:0;">
+                <li>Export your cycle tracking data</li>
+                <li>Check the questions you want to ask</li>
+                <li>Note your top 3 concerns</li>
+                <li>Write down current medications/supplements</li>
+                <li>Print this page to bring along</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__body">
+              <h4>&#128172; During Your Visit</h4>
+              <ul class="text-sm text-muted" style="margin:0;">
+                <li>Share your tracking data summary</li>
+                <li>Describe symptoms in specific terms</li>
+                <li>Ask your prepared questions</li>
+                <li>Take notes on recommendations</li>
+                <li>Ask for written aftercare instructions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">PeriodGuide</div>
+          <p class="footer__brand-desc" data-i18n="footer_tagline">Your cycle companion. Evidence-based. Privacy-first. Culturally respectful.</p>
+        </div>
+        <div><h4 class="footer__heading">Tools</h4><ul class="footer__links"><li><a href="today.html">Today's Guide</a></li><li><a href="track.html">Track</a></li><li><a href="insights.html">Insights</a></li></ul></div>
+        <div><h4 class="footer__heading">Resources</h4><ul class="footer__links"><li><a href="toolkits/cramps.html">Cramps Toolkit</a></li><li><a href="traditions.html">Traditions</a></li></ul></div>
+        <div><h4 class="footer__heading">Company</h4><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 PeriodGuide.com</p>
+        <p class="text-sm">This is not medical advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/tracking.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('gen-date').textContent = new Date().toLocaleDateString();
+
+      const stats = PG_TRACKING.getStats(90);
+      const statsEl = document.getElementById('summary-stats');
+      if (stats && stats.totalEntries > 0) {
+        statsEl.innerHTML = `
+          <div class="summary-row"><span class="font-semibold">Days Tracked</span><span>${stats.totalEntries}</span></div>
+          <div class="summary-row"><span class="font-semibold">Date Range</span><span>${stats.dateRange.from} to ${stats.dateRange.to}</span></div>
+          <div class="summary-row"><span class="font-semibold">Average Pain</span><span>${stats.avgPain}/10</span></div>
+          <div class="summary-row"><span class="font-semibold">Average Mood</span><span>${stats.avgMood}/10</span></div>
+          <div class="summary-row"><span class="font-semibold">Average Energy</span><span>${stats.avgEnergy}/10</span></div>
+          <div class="summary-row"><span class="font-semibold">Average Sleep</span><span>${stats.avgSleep} hrs</span></div>
+          <div class="summary-row"><span class="font-semibold">Average Stress</span><span>${stats.avgStress}/10</span></div>
+          <div class="summary-row"><span class="font-semibold">Bleeding Days</span><span>${stats.bleedingDays}</span></div>
+          <div class="summary-row"><span class="font-semibold">Migraine Days</span><span>${stats.migraineDays}</span></div>
+        `;
+      }
+
+      document.getElementById('print-summary')?.addEventListener('click', () => window.print());
+      document.getElementById('export-summary-json')?.addEventListener('click', () => {
+        const data = PG_TRACKING.exportEntries('json');
+        const blob = new Blob([data], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'periodguide-clinic-data.json';
+        document.body.appendChild(a); a.click();
+        document.body.removeChild(a); URL.revokeObjectURL(url);
+        PG_APP.showToast('Data exported', 'success');
+      });
+    });
+  </script>
+</body>
+</html>
