@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "",
-  "outputDirectory": "public",
+  "outputDirectory": ".",
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/es/(.*)\\.html", "dest": "/es/$1.html" },
