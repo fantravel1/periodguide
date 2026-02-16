@@ -2,15 +2,12 @@
   "version": 2,
   "buildCommand": "",
   "outputDirectory": ".",
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/es/(.*)\\.html", "dest": "/es/$1.html" },
-    { "src": "/fr/(.*)\\.html", "dest": "/fr/$1.html" },
-    { "src": "/es/?$", "dest": "/es/index.html" },
-    { "src": "/fr/?$", "dest": "/fr/index.html" },
-    { "src": "/toolkits/(.*)\\.html", "dest": "/toolkits/$1.html" },
-    { "src": "/(.*)\\.html", "dest": "/$1.html" },
-    { "src": "^/$", "dest": "/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/es", "destination": "/es/index.html" },
+    { "source": "/fr", "destination": "/fr/index.html" },
+    { "source": "/api/:path*", "destination": "/api/:path*" }
   ],
   "headers": [
     {
@@ -36,7 +33,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.html",
+      "source": "/(.*).html",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
