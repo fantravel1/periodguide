@@ -9,6 +9,9 @@
     { "source": "/fr", "destination": "/fr/index.html" },
     { "source": "/api/:path*", "destination": "/api/:path*" }
   ],
+  "errorPages": {
+    "404": "/404.html"
+  },
   "headers": [
     {
       "source": "/(.*)",
